@@ -1,0 +1,15 @@
+title: "David Boureau - Web development, acquisition"
+description: >
+  David Boureau is a web developer based in Paris, France. He has a master in computer 
+  science, works as a full-stack developer mostly in JavaScript
+  and Node.js, as well as Ruby and Java.
+baseurl: ""
+url: "http://bdavidxyz.com"
+
+permalink: /:title/
+exclude:
+- README.md
+- tmp
+- package.json
+- node_modules
+- gulpfile.js
