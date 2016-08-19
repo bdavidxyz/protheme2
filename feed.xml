@@ -6,31 +6,13 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 19 Aug 2016 05:40:47 +0200</pubDate>
-    <lastBuildDate>Fri, 19 Aug 2016 05:40:47 +0200</lastBuildDate>
+    <pubDate>Fri, 19 Aug 2016 05:51:09 +0200</pubDate>
+    <lastBuildDate>Fri, 19 Aug 2016 05:51:09 +0200</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
-        <title>What BS4 looks like</title>
+        <title>What Bootstrap 4 looks like</title>
         <description>&lt;p&gt;Here is a giant collection of all visual elements, extracted from Bootstrap 4 docs.&lt;/p&gt;
-
-&lt;p&gt;If you like this short article, share it :&lt;/p&gt;
-
-&lt;div&gt;
-
-&lt;a href=&quot;https://news.ycombinator.com/submit&quot; class=&quot;hn-button&quot; data-title=&quot;What Bootstrap 4 looks like&quot; data-url=&quot;http://bdavidxyz.com/blog/what-bootstrap4-looks-like&quot; data-style=&quot;facebook&quot;&gt;Vote on Hacker News&lt;/a&gt;
-&lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot; data-text=&quot;What Bootstrap 4 looks like&quot; data-via=&quot;bdavidxyz&quot;&gt;Tweet&lt;/a&gt; 
-&lt;a href=&quot;//www.reddit.com/submit&quot; onclick=&quot;window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false&quot;&gt; &lt;img src=&quot;//www.redditstatic.com/spreddit10.gif&quot; alt=&quot;submit to reddit&quot; border=&quot;0&quot; style=&quot;width:80px;margin-top:-10px&quot; /&gt; &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;p&gt;If you don’t like it, say it :&lt;/p&gt;
-
-&lt;div&gt;
-
-&lt;a href=&quot;https://news.ycombinator.com/submit&quot; class=&quot;hn-button&quot; data-title=&quot;What Bootstrap 4 looks like&quot; data-url=&quot;http://bdavidxyz.com/blog/what-bootstrap4-looks-like&quot; data-style=&quot;facebook&quot;&gt;Vote on Hacker News&lt;/a&gt;
-&lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot; data-text=&quot;What Bootstrap 4 looks like&quot; data-via=&quot;bdavidxyz&quot;&gt;Tweet&lt;/a&gt; 
-&lt;a href=&quot;//www.reddit.com/submit&quot; onclick=&quot;window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false&quot;&gt; &lt;img src=&quot;//www.redditstatic.com/spreddit10.gif&quot; alt=&quot;submit to reddit&quot; border=&quot;0&quot; style=&quot;width:80px;margin-top:-10px&quot; /&gt; &lt;/a&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;short-version&quot;&gt;Short version&lt;/h2&gt;
 

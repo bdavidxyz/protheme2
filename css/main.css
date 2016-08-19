@@ -2073,6 +2073,12 @@ blockquote {
   margin-top: 48px;
   margin-bottom: 24px; }
 
+.post h2 {
+  margin-top: 72px; }
+
+.post h1 {
+  margin-top: 72px; }
+
 /*------------------------------------*\
     CODE.SCSS
 \*------------------------------------*/
