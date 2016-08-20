@@ -23,3 +23,9 @@
   font-size: $milli-size;
   color: $gray-light;
 }
+
+// Remove disqus blah-blah
+// -------------------------
+#footer.disqus-footer__wrapper {
+  display: none;
+}

@@ -7,8 +7,9 @@ layout: default
   <div class="post--date">{{ page.date | date: "%d %B, %Y" }}</div>
   {{ content }}
   <div class="post--comments">
-  
-
+    {% if page.comments != false %}
+      {% include disqus.html %}
+    {% endif %}
   </div>
 </section>
 
