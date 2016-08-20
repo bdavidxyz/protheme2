@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-I'm a web developer based in Paris, France. I graduated a master in computer sciences, started my career as a back-end developer, having various position as tester, project leader. I switched to front-end technologies years ago and now I am focused full-time on what I love doing: building great software.
+I'm a web developer based in Paris, France. I graduated a master in computer sciences, started my career as a back-end developer, have held various position as tester, quality leader, project leader, mentor, always keeping hands on code. I switched to front-end technologies years ago and now I am focused full-time on what I love doing: building great software.
 
 Some things I look for in the things I work on:
 
@@ -60,7 +60,7 @@ Things I've used before and sometimes come back to:
 Things I'm learning and would like to work with more:
 
 - [WebDesign](https://www.thinkful.com/courses/learn-web-design-online/), 
-- [GrowthHacking](http://www.thefamily.co/)
+- [GrowthHacking](https://growthhackers.com/welcome)
 
 
 

@@ -31,4 +31,8 @@
     color: $gray-dark;
     line-height: 1.2;
   }
+
+  h2 {
+    margin-top: 2*$base-spacing-unit;
+  }
 }
