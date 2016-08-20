@@ -2013,6 +2013,9 @@ blockquote {
   font-size: 12px;
   color: #aaa; }
 
+#footer.disqus-footer__wrapper {
+  display: none; }
+
 /*------------------------------------*\
     PAGE.SCSS
 \*------------------------------------*/
