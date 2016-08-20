@@ -2036,6 +2036,8 @@ blockquote {
   .page h2, .post h2, .page h3, .post h3 {
     color: #333;
     line-height: 1.2; }
+  .page h2, .post h2 {
+    margin-top: 48px; }
 
 /*------------------------------------*\
     POSTS.SCSS
