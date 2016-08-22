@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Hi, it's David
 ---
 
 I'm a web developer based in Paris, France. I graduated a master in computer sciences, started my career as a back-end developer, have held various position as tester, quality leader, project leader, mentor, always keeping hands on code. I switched to front-end technologies years ago and now I am focused full-time on what I love doing: building great software.
