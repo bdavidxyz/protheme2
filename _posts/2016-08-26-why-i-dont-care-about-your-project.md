@@ -61,7 +61,7 @@ So when you tell a developer your project only requires “a few hours a week, o
 
 ## “If your project was that important to you, you would learn how to create it on your own”
 
-This is what the developer **you have an appointment with** is thinking, even though he **will never tell you** Programming is not an occult practice reserved only to those who studied advanced engineering. Any thirteen-year-old kid can create their website. You’re over 20 and possess **all the cognitive skills** to do it too.
+This is what the developer **you have an appointment with** is thinking, even though he **will never tell you.** Programming is not an occult practice reserved only to those who studied advanced engineering. Any thirteen-year-old kid can create their website. You’re over 20 and possess **all the cognitive skills** to do it too.
 
 
 
@@ -79,7 +79,7 @@ That developer you’re in contact with knows perfectly how easy **communication
 
 ![](http://res.cloudinary.com/bdavidxyz-com/image/upload/v1472270166/widcayp6_ksvgqr.png)
 
-So while you decide you need a Like button here but not there, and then change your mind, your developer <b style="text-decoration:underline">knew from the start</b> what to do but you chose not to listen. Or maybe your developer didn’t tell you because at the end of the day, it’s YOUR project and the 5% shares you promised means he won’t work that hard for you, I can assure you.
+So while you decide you need a *Like button* here but not there, and then change your mind, your developer <b style="text-decoration:underline">knew from the start</b> what to do but you chose not to listen. Or maybe your developer didn’t tell you because at the end of the day, it’s YOUR project and the 5% shares you promised means he won’t work that hard for you, I can assure you.
 
 
 ![](http://res.cloudinary.com/bdavidxyz-com/image/upload/v1472270167/widcayp7_n8e2ps.png)
