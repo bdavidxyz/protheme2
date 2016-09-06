@@ -1,7 +1,9 @@
 ---
 layout: page
-title: I'm David, available for hire.
+title: Hi, it's David.
 ---
+
+<p style="background-color:#f25454;color:white;">I currently accept new projects (part-time).</p>
 
 I'm a web developer based in Paris, France. I graduated a master in computer sciences, started my career as a back-end developer, have held various position as tester, quality leader, project leader, mentor, always keeping hands on code. I switched to front-end technologies years ago and now I am focused full-time on what I love doing: building great software.
 
@@ -20,7 +22,8 @@ Some things I look for in the things I work on:
 - [GitHub](https://github.com/bdavidxyz)
 - [RSS](/feed.xml)
 - [LinkedIn](http://www.linkedin.com/in/bdavidxyz)
-- [Resume](/)
+- [Resume (English)](/resume-david-boureau-en.pdf)
+- [Resume (French)](/resume-david-boureau-fr.pdf)
 
 ## Recent projects
 
@@ -69,5 +72,7 @@ Things I'm learning and would like to work with more:
 **A good chat**: There's nothing like an interesting chat over a fresh beer (maybe a couple), talking about startup, programming, cooking, cats, anything really. If you're in town and want to meet up, be sure to holler!
 
 **Cooking**: Don't ask me why, but I love to cook. I try new recipes as much as I can, taking note on what failed and what can be done the next time to improve the recipe.
+
+**Growth Hacking**: Probably an overused buzzword, but still has value as a developer. I like to discover and find new "magic tricks" to attract potential customers to a website. 
 
 **Sport**: Just any, as long as I'm exhausted after practicing it.
