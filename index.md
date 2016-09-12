@@ -62,7 +62,7 @@ Things I've used before and sometimes come back to:
 
 Things I'm learning and would like to work with more:
 
-- [WebDesign](https://www.thinkful.com/courses/learn-web-design-online/), 
+- [WebDesign](https://www.thinkful.com/courses/learn-web-design-online/),
 - [GrowthHacking](https://growthhackers.com/welcome)
 
 
@@ -72,7 +72,5 @@ Things I'm learning and would like to work with more:
 **A good chat**: There's nothing like an interesting chat over a fresh beer (maybe a couple), talking about startup, programming, cooking, cats, anything really. If you're in town and want to meet up, be sure to holler!
 
 **Cooking**: Don't ask me why, but I love to cook. I try new recipes as much as I can, taking note on what failed and what can be done the next time to improve the recipe.
-
-**Growth Hacking**: Probably an overused buzzword, but still has value as a developer. I like to discover and find new "magic tricks" to attract potential customers to a website. 
 
 **Sport**: Just any, as long as I'm exhausted after practicing it.
