@@ -6,73 +6,173 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 30 Dec 2016 15:46:08 +0100</pubDate>
-    <lastBuildDate>Fri, 30 Dec 2016 15:46:08 +0100</lastBuildDate>
+    <pubDate>Tue, 24 Jan 2017 13:50:01 +0100</pubDate>
+    <lastBuildDate>Tue, 24 Jan 2017 13:50:01 +0100</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
-        <title>Who are your superstars</title>
-        <description>&lt;p&gt;The modern society prices the famous. Hollywood presents the musicians, artists, entertainers as the ultimate social evolution and icons of modernity. Every little quote, advice or insight is often attributed to the great and famous names. We all know that talented person who only made it after linking up with a not-so-talented but famous person.&lt;/p&gt;
+        <title>An exceedingly clean code</title>
+        <description>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;The article is written with ES6 for examples, but the article could be applied to other programming languages.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h2 id=&quot;false-equation&quot;&gt;False Equation.&lt;/h2&gt;
+&lt;style type=&quot;text/css&quot;&gt;div.gist-meta{display: none;} div.gist .gist-file{border: none;} div.gist .gist-data{border: none;}&lt;/style&gt;
 
-&lt;p&gt;We equate fame with smartness, wisdom and talent even when it is not. Make no mistake there is nothing wrong with popularity. In fact, lots of the famous persons are fantastic, and wise people with incredible talent. However, for those who want to work, relate and do business with their superstars, then these A-listers would be hard to reach let alone convince.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/bdavidxyz/74bb653ee49fa849edc8e4037f1b8654.js&quot;&gt;&lt;/script&gt;
 
-&lt;h2 id=&quot;great-but-not-famous&quot;&gt;Great but Not Famous.&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;F*** what does this function try to…&lt;/li&gt;
+  &lt;li&gt;stop, the dev who made it left last week&lt;/li&gt;
+  &lt;li&gt;well, since _.zip is used, proposals and checkboxes are probably arrays.&lt;/li&gt;
+  &lt;li&gt;good … arrays of what? Didn’t know _.zip, I discovered lodash with this project.&lt;/li&gt;
+  &lt;li&gt;and what’s the point of line 4 condition ?&lt;/li&gt;
+  &lt;li&gt;I dunno.&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;However, we all have at one point encountered a not so well known blog, a gallery or a person whose immense talent has not necessarily made them famous. Most often it is easy to discount their advice on the basis of their anonymity or relatively lower fame and publicity. Most of these people may simply not pursue the fame through sheer publicity of they prefer to grow their audience organically. These people sometimes make for the best mentors and superstars in life.&lt;/p&gt;
+&lt;p&gt;A small, very small JS function of 11 lines turns into a maintenance nightmare. The slightest bug, the slightest recovery, the slightest refactoring costs a lot of time and energy.&lt;/p&gt;
 
-&lt;h2 id=&quot;they-have-little-to-lose&quot;&gt;They have little to Lose.&lt;/h2&gt;
+&lt;p&gt;Knowing that any software is counted easily in thousands of lines of code …&lt;/p&gt;
 
-&lt;p&gt;One of the critical bits about the not-so-famous celebrities is that they can dispense truly insightful advice. The fact that they don’t stand to lose much means they are more willing to say things that may not augur well with most people. Lots of big time superstars are measured in what they say since they are scared of damaging or eroding their brand. That’s why most of them parrot oft repeated and useless lines in the name of motivation.
-More Time for Mentorship. The not-so-famous celebs are more likely to have time for you if you need advice or mentorship. They are less busy and more practical in their mentorship and the help that they provide. These are more likely to invest in your ideas and dreams as well as critique their effectiveness. This availability is very critical since superstars should be more than someone you only admire. He or she should be able to avail certain network skills and resources for your growth.&lt;/p&gt;
+&lt;h2 id=&quot;version-0--do-not-change-anything&quot;&gt;Version 0 : do not change anything&lt;/h2&gt;
 
-&lt;h2 id=&quot;they-are-relatable&quot;&gt;They are Relatable.&lt;/h2&gt;
-&lt;p&gt;Your great but not-so-famous superstar is more grounded than many celebrities. We all know that lots of big time superstars lose touch with the everyday realities of their fan’s lives. That’s why it’s easier to work with them than with A-rate superstars. Keep in mind that it’s okay to admire big time celebrities, but if you are looking for more than mere admiration, then they may not be the best to work with.&lt;/p&gt;
+&lt;p&gt;And write automated tests. No need to be unit tests written the TDD way. Integration tests written afterwards are just as good enough to begin with. Or acceptance tests.&lt;/p&gt;
 
-&lt;h2 id=&quot;my-list-ymmv&quot;&gt;My list. YMMV.&lt;/h2&gt;
+&lt;p&gt;Without any test, it’s impossible to improve anything.&lt;/p&gt;
+
+&lt;p&gt;Voluntarily I do not show the unit tests of this function, the purpose of the article is to give an example of documentation by the code.&lt;/p&gt;
+
+&lt;h2 id=&quot;version-1--check-preconditions&quot;&gt;Version 1 : Check preconditions&lt;/h2&gt;
+
+&lt;p&gt;In order to help the reader, while improving the robustness of the code, and to avoid the edge effects, let’s be sure of the input parameters before going further.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/bdavidxyz/59289f3cd5c817b03e8c31f1c8eb265a.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;We understand what the input parameters are, but that’s hard. Have you noticed the “!” Exclamation mark ?? No ? So why not write some utility functions that makes it great:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/bdavidxyz/fcf0c85fcf3df127a0eefd4f8b60c757.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;And even better, we use an IDE plugin to get a nice alignment&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/bdavidxyz/0e4a37b6d0164f40221febba014d6c2f.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;There you go ! No need to comment at this stage, it’s clear as water.&lt;/p&gt;
+
+&lt;p&gt;We use Ruby-like code, where each word is placed in the right order to be sure we will able to read the code as in natural language. For example, here one can read in the 2nd line, excluding everything that is not strictly textual:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;if proposals is not array of string return []&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There you go ! Again, no need to comment until then.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note 1&lt;/strong&gt; : An effective way of fighting the anxiety of “but-what-if-this-happens” (and against the debugging hours!) is to guard against any unexpected parameters by returning an empty value corresponding to expected type. This is the behavior chosen in a majority of cases for lodash / underscore. (For example, returning an empty string if the function returns a String, an empty array if the array must return an Array, etc.).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note 2&lt;/strong&gt; : Even a strongly-typed language wouldn’t have solved all problems. The checks on the difference of the array sizes / on the non-empty array would still have taken place.&lt;/p&gt;
+
+&lt;h2 id=&quot;version-2--comment-by-example&quot;&gt;Version 2 : Comment by example&lt;/h2&gt;
+
+&lt;p&gt;Comment the signature of the function. But-that-serves-nothing-if-the-function-is-well-named.&lt;/p&gt;
+
+&lt;p&gt;Not exactly.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/bdavidxyz/b7488c92e7275216b5bfcef426820158.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The general idea is: document by example.
+    &lt;ul&gt;
+      &lt;li&gt;These parameters are relocated in the overall context of the project (for example, it is understood that proposals are proposals or questions posed to the user)&lt;/li&gt;
+      &lt;li&gt;By the way the type of parameters of the function are now evident.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Any odd / counterintuitive thing can be reported here. With the help of the word WARNING or XXX in the comments. It’s a bit like Github: do not be afraid to abuse it. There will ALWAYS be issues, always odd thinks in your code, even if you do not like it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;version-3--verticalize-your-code&quot;&gt;Version 3 : Verticalize your code&lt;/h2&gt;
+
+&lt;p&gt;This &lt;a href=&quot;http://stackoverflow.com/a/37770048/2595513&quot;&gt;StackOverflow answer&lt;/a&gt; is a good example of verticalization.&lt;/p&gt;
+
+&lt;p&gt;In our case, the use of &lt;a href=&quot;http://bekk.github.io/functional-js/workshop/02-1-applicative&quot;&gt;applicative programming&lt;/a&gt; make  code greater.&lt;/p&gt;
+
+&lt;p&gt;Even on a very small function, think about what happens when the flow of instruction looks like this&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;svg width=&quot;260px&quot; height=&quot;285px&quot; viewBox=&quot;0 0 260 285&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;&lt;defs&gt;&lt;rect id=&quot;path-1&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;60&quot;&gt;&lt;/rect&gt;&lt;mask id=&quot;mask-2&quot; maskContentUnits=&quot;userSpaceOnUse&quot; maskUnits=&quot;objectBoundingBox&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;60&quot; fill=&quot;white&quot;&gt;&lt;use xlink:href=&quot;#path-1&quot;&gt;&lt;/use&gt;&lt;/mask&gt;&lt;rect id=&quot;path-3&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;60&quot;&gt;&lt;/rect&gt;&lt;mask id=&quot;mask-4&quot; maskContentUnits=&quot;userSpaceOnUse&quot; maskUnits=&quot;objectBoundingBox&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;60&quot; fill=&quot;white&quot;&gt;&lt;use xlink:href=&quot;#path-3&quot;&gt;&lt;/use&gt;&lt;/mask&gt;&lt;rect id=&quot;path-5&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;60&quot;&gt;&lt;/rect&gt;&lt;mask id=&quot;mask-6&quot; maskContentUnits=&quot;userSpaceOnUse&quot; maskUnits=&quot;objectBoundingBox&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;60&quot; fill=&quot;white&quot;&gt;&lt;use xlink:href=&quot;#path-5&quot;&gt;&lt;/use&gt;&lt;/mask&gt;&lt;rect id=&quot;path-7&quot; x=&quot;6&quot; y=&quot;6&quot; width=&quot;26&quot; height=&quot;26&quot;&gt;&lt;/rect&gt;&lt;mask id=&quot;mask-8&quot; maskContentUnits=&quot;userSpaceOnUse&quot; maskUnits=&quot;objectBoundingBox&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;26&quot; height=&quot;26&quot; fill=&quot;white&quot;&gt;&lt;use xlink:href=&quot;#path-7&quot;&gt;&lt;/use&gt;&lt;/mask&gt;&lt;rect id=&quot;path-9&quot; x=&quot;6&quot; y=&quot;6&quot; width=&quot;26&quot; height=&quot;26&quot;&gt;&lt;/rect&gt;&lt;mask id=&quot;mask-10&quot; maskContentUnits=&quot;userSpaceOnUse&quot; maskUnits=&quot;objectBoundingBox&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;26&quot; height=&quot;26&quot; fill=&quot;white&quot;&gt;&lt;use xlink:href=&quot;#path-9&quot;&gt;&lt;/use&gt;&lt;/mask&gt;&lt;/defs&gt;&lt;g id=&quot;A-visual-vocabulary--&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;g id=&quot;Artboard&quot; transform=&quot;translate(-141.000000, -23.000000)&quot;&gt;&lt;g id=&quot;Making-choices&quot; transform=&quot;translate(141.000000, 23.000000)&quot;&gt;&lt;g id=&quot;decision-point&quot;&gt;&lt;g id=&quot;basic/page-text&quot; transform=&quot;translate(100.000000, 0.000000)&quot;&gt;&lt;use id=&quot;page&quot; stroke=&quot;#7F8C8D&quot; mask=&quot;url(#mask-2)&quot; stroke-width=&quot;4&quot; fill=&quot;#FFFFFF&quot; fill-rule=&quot;evenodd&quot; xlink:href=&quot;#path-1&quot;&gt;&lt;/use&gt;&lt;text id=&quot;login&quot; font-family=&quot;ArialMT, Arial&quot; font-size=&quot;12&quot; font-weight=&quot;normal&quot; line-spacing=&quot;13&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;tspan x=&quot;14.3476562&quot; y=&quot;32.9296875&quot;&gt;do this&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g id=&quot;basic/page-text&quot; transform=&quot;translate(20.000000, 150.000000)&quot;&gt;&lt;use id=&quot;page&quot; stroke=&quot;#7F8C8D&quot; mask=&quot;url(#mask-4)&quot; stroke-width=&quot;4&quot; fill=&quot;#FFFFFF&quot; fill-rule=&quot;evenodd&quot; xlink:href=&quot;#path-3&quot;&gt;&lt;/use&gt;&lt;text id=&quot;login&quot; font-family=&quot;ArialMT, Arial&quot; font-size=&quot;12&quot; font-weight=&quot;normal&quot; line-spacing=&quot;13&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;tspan x=&quot;13.6767578&quot; y=&quot;32.9296875&quot;&gt;do that&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g id=&quot;basic/page-text-2&quot; transform=&quot;translate(180.000000, 150.000000)&quot;&gt;&lt;use id=&quot;page&quot; stroke=&quot;#7F8C8D&quot; mask=&quot;url(#mask-6)&quot; stroke-width=&quot;4&quot; fill=&quot;#FFFFFF&quot; fill-rule=&quot;evenodd&quot; xlink:href=&quot;#path-5&quot;&gt;&lt;/use&gt;&lt;text id=&quot;product&quot; font-family=&quot;ArialMT, Arial&quot; font-size=&quot;12&quot; font-weight=&quot;normal&quot; line-spacing=&quot;13&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;tspan x=&quot;11.5&quot; y=&quot;28&quot;&gt;launch this&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g id=&quot;arrow/connection&quot; transform=&quot;translate(129.000000, 172.500000) rotate(-270.000000) translate(-129.000000, -172.500000) translate(16.500000, 77.500000)&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;path d=&quot;M84.3252772,4.74242424 C83.859262,5.91273569 82.8636364,7.28787879 82.8636364,7.28787879 L90.5,3.89393939 L82.8636364,0.5 C82.8636364,0.5 83.9708907,1.92335529 84.3965901,3.04545455 L64.5,3.04545455 L64.5,4.74242424 L84.3252772,4.74242424 Z M84.5,4.21126578 C84.5387505,4.05322147 84.5606061,3.9051318 84.5606061,3.77213542 C84.5606061,3.64835443 84.5387505,3.51052598 84.5,3.36343266 L84.5,4.21126578 Z&quot; id=&quot;Triangle-1&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M169.325277,4.74242424 C168.859262,5.91273569 167.863636,7.28787879 167.863636,7.28787879 L175.5,3.89393939 L167.863636,0.5 C167.863636,0.5 168.970891,1.92335529 169.39659,3.04545455 L149.5,3.04545455 L149.5,4.74242424 L169.325277,4.74242424 Z M169.5,4.21126578 C169.538751,4.05322147 169.560606,3.9051318 169.560606,3.77213542 C169.560606,3.64835443 169.538751,3.51052598 169.5,3.36343266 L169.5,4.21126578 Z&quot; id=&quot;Triangle-1&quot; transform=&quot;translate(162.500000, 3.893939) scale(-1, 1) translate(-162.500000, -3.893939) &quot;&gt;&lt;/path&gt;&lt;path d=&quot;M84.3252772,164.742424 C83.859262,165.912736 82.8636364,167.287879 82.8636364,167.287879 L90.5,163.893939 L82.8636364,160.5 C82.8636364,160.5 83.9708907,161.923355 84.3965901,163.045455 L64.5,163.045455 L64.5,164.742424 L84.3252772,164.742424 Z M84.5,164.211266 C84.5387505,164.053221 84.5606061,163.905132 84.5606061,163.772135 C84.5606061,163.648354 84.5387505,163.510526 84.5,163.363433 L84.5,164.211266 Z&quot; id=&quot;Triangle-1&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M228.325277,177.742424 C227.859262,178.912736 226.863636,180.287879 226.863636,180.287879 L234.5,176.893939 L226.863636,173.5 C226.863636,173.5 227.970891,174.923355 228.39659,176.045455 L208.5,176.045455 L208.5,177.742424 L228.325277,177.742424 Z M228.5,177.211266 C228.538751,177.053221 228.560606,176.905132 228.560606,176.772135 C228.560606,176.648354 228.538751,176.510526 228.5,176.363433 L228.5,177.211266 Z&quot; id=&quot;Triangle-1&quot; transform=&quot;translate(221.500000, 176.893939) rotate(90.000000) translate(-221.500000, -176.893939) &quot;&gt;&lt;/path&gt;&lt;rect id=&quot;Triangle-1&quot; x=&quot;0&quot; y=&quot;83&quot; width=&quot;66&quot; height=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect id=&quot;Triangle-1&quot; x=&quot;156&quot; y=&quot;163&quot; width=&quot;66&quot; height=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect id=&quot;Triangle-1&quot; transform=&quot;translate(65.500000, 83.993827) rotate(-270.000000) translate(-65.500000, -83.993827) &quot; x=&quot;-15&quot; y=&quot;83&quot; width=&quot;161&quot; height=&quot;1.98765432&quot;&gt;&lt;/rect&gt;&lt;rect id=&quot;Triangle-1&quot; transform=&quot;translate(221.500000, 83.993827) rotate(-270.000000) translate(-221.500000, -83.993827) &quot; x=&quot;141&quot; y=&quot;83&quot; width=&quot;161&quot; height=&quot;1.98765432&quot;&gt;&lt;/rect&gt;&lt;/g&gt;&lt;g id=&quot;action/decision&quot; transform=&quot;translate(121.000000, 74.000000)&quot;&gt;&lt;text id=&quot;decision-point&quot; font-family=&quot;ArialMT, Arial&quot; font-size=&quot;12&quot; font-weight=&quot;normal&quot; line-spacing=&quot;13&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;tspan x=&quot;43&quot; y=&quot;24&quot;&gt;decision point&lt;/tspan&gt;&lt;/text&gt;&lt;use id=&quot;Rectangle-121&quot; stroke=&quot;#7F8C8D&quot; mask=&quot;url(#mask-8)&quot; stroke-width=&quot;4&quot; fill=&quot;#FFFFFF&quot; fill-rule=&quot;evenodd&quot; transform=&quot;translate(19.000000, 19.000000) rotate(-315.000000) translate(-19.000000, -19.000000) &quot; xlink:href=&quot;#path-7&quot;&gt;&lt;/use&gt;&lt;/g&gt;&lt;g id=&quot;Line-+-Triangle-1&quot; transform=&quot;translate(0.000000, 26.000000)&quot;&gt;&lt;path d=&quot;M1,153.519608 L1,4.22899284 M1,154.013072 L19,154.013072&quot; id=&quot;Line&quot; stroke=&quot;#7F8C8D&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;square&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M1,254.519608 L1,105.228993 M1,255.013072 L19,255.013072&quot; id=&quot;Line&quot; stroke=&quot;#7F8C8D&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;square&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M93.7226482,5 C93.1734159,6.37929564 92,8 92,8 L98.75,5 L100,5 L100,4.44444444 L101,4 L100,3.55555556 L100,3 L98.75,3 L92,0 C92,0 93.3049783,1.67752588 93.8066955,3 L2,3 L2,5 L93.7226482,5 Z&quot; id=&quot;Triangle-1&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M151.722648,256 C151.173416,257.379296 150,259 150,259 L156.75,256 L158,256 L158,255.444444 L159,255 L158,254.555556 L158,254 L156.75,254 L150,251 C150,251 151.304978,252.677526 151.806695,254 L60,254 L60,256 L151.722648,256 Z&quot; id=&quot;Triangle-1&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g id=&quot;connection/completion/arrow--mini&quot; transform=&quot;translate(201.000000, 245.000000) rotate(-270.000000) translate(-201.000000, -245.000000) translate(188.000000, 241.000000)&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;path d=&quot;M18.7226482,5 C18.1734159,6.37929564 17,8 17,8 L26,4 L17,0 C17,0 18.3049783,1.67752588 18.8066955,3 L0,3 L0,5 L18.7226482,5 Z&quot; id=&quot;Triangle-1&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;path d=&quot;M180.5,304 L148,304&quot; id=&quot;Line&quot; stroke=&quot;#979797&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;square&quot;&gt;&lt;/path&gt;&lt;g id=&quot;action/decision&quot; transform=&quot;translate(182.000000, 254.000000)&quot;&gt;&lt;text id=&quot;decision-point&quot; font-family=&quot;ArialMT, Arial&quot; font-size=&quot;12&quot; font-weight=&quot;normal&quot; line-spacing=&quot;13&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;tspan x=&quot;43&quot; y=&quot;24&quot;&gt;decision point&lt;/tspan&gt;&lt;/text&gt;&lt;use id=&quot;Rectangle-121&quot; stroke=&quot;#7F8C8D&quot; mask=&quot;url(#mask-10)&quot; stroke-width=&quot;4&quot; fill=&quot;#FFFFFF&quot; fill-rule=&quot;evenodd&quot; transform=&quot;translate(19.000000, 19.000000) rotate(-315.000000) translate(-19.000000, -19.000000) &quot; xlink:href=&quot;#path-9&quot;&gt;&lt;/use&gt;&lt;/g&gt;&lt;path d=&quot;M361,256.5 L361,304.5&quot; id=&quot;Line&quot; stroke=&quot;#979797&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;square&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This is particularly painful, isn’t it?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;On the other hand, a vertical instruction flow make things much simpler.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;svg width=&quot;80px&quot; height=&quot;232px&quot; viewBox=&quot;0 0 80 232&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;&lt;defs&gt;&lt;polygon id=&quot;path-1&quot; points=&quot;-5.68434189e-14 50.2998047 -5.68434189e-14 10.3369141 10.3095703 0 70 0 80 9.86816406 80 50.3212891 69.6318359 60 9.42285156 60&quot;&gt;&lt;/polygon&gt;&lt;mask id=&quot;mask-2&quot; maskContentUnits=&quot;userSpaceOnUse&quot; maskUnits=&quot;objectBoundingBox&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;60&quot; fill=&quot;white&quot;&gt;&lt;use xlink:href=&quot;#path-1&quot;&gt;&lt;/use&gt;&lt;/mask&gt;&lt;rect id=&quot;path-3&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;60&quot;&gt;&lt;/rect&gt;&lt;mask id=&quot;mask-4&quot; maskContentUnits=&quot;userSpaceOnUse&quot; maskUnits=&quot;objectBoundingBox&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;60&quot; fill=&quot;white&quot;&gt;&lt;use xlink:href=&quot;#path-3&quot;&gt;&lt;/use&gt;&lt;/mask&gt;&lt;rect id=&quot;path-5&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;60&quot;&gt;&lt;/rect&gt;&lt;mask id=&quot;mask-6&quot; maskContentUnits=&quot;userSpaceOnUse&quot; maskUnits=&quot;objectBoundingBox&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;60&quot; fill=&quot;white&quot;&gt;&lt;use xlink:href=&quot;#path-5&quot;&gt;&lt;/use&gt;&lt;/mask&gt;&lt;/defs&gt;&lt;g id=&quot;A-visual-vocabulary--&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;g id=&quot;Artboard&quot; transform=&quot;translate(-620.000000, -26.000000)&quot;&gt;&lt;g id=&quot;useful-label&quot; transform=&quot;translate(620.000000, 26.000000)&quot;&gt;&lt;g id=&quot;basic/reference&quot; transform=&quot;translate(0.000000, 86.000000)&quot;&gt;&lt;use id=&quot;page&quot; stroke=&quot;#7F8C8D&quot; mask=&quot;url(#mask-2)&quot; stroke-width=&quot;4&quot; fill=&quot;#FFFFFF&quot; fill-rule=&quot;evenodd&quot; xlink:href=&quot;#path-1&quot;&gt;&lt;/use&gt;&lt;text id=&quot;foo&quot; font-family=&quot;ArialMT, Arial&quot; font-size=&quot;12&quot; font-weight=&quot;normal&quot; line-spacing=&quot;13&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;tspan x=&quot;23.5&quot; y=&quot;35&quot;&gt;do foo&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g id=&quot;basic/page-text&quot;&gt;&lt;use id=&quot;page&quot; stroke=&quot;#7F8C8D&quot; mask=&quot;url(#mask-4)&quot; stroke-width=&quot;4&quot; fill=&quot;#FFFFFF&quot; fill-rule=&quot;evenodd&quot; xlink:href=&quot;#path-3&quot;&gt;&lt;/use&gt;&lt;text id=&quot;login&quot; font-family=&quot;ArialMT, Arial&quot; font-size=&quot;12&quot; font-weight=&quot;normal&quot; line-spacing=&quot;13&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;tspan x=&quot;20.0136719&quot; y=&quot;32.9296875&quot;&gt;do A&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g id=&quot;connection/completion/arrow--mini&quot; transform=&quot;translate(40.000000, 73.000000) rotate(-270.000000) translate(-40.000000, -73.000000) translate(27.000000, 69.000000)&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;path d=&quot;M18.7226482,5 C18.1734159,6.37929564 17,8 17,8 L26,4 L17,0 C17,0 18.3049783,1.67752588 18.8066955,3 L0,3 L0,5 L18.7226482,5 Z&quot; id=&quot;Triangle-1&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g id=&quot;connection/completion/arrow--mini&quot; transform=&quot;translate(40.000000, 159.000000) rotate(-270.000000) translate(-40.000000, -159.000000) translate(27.000000, 155.000000)&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;path d=&quot;M18.7226482,5 C18.1734159,6.37929564 17,8 17,8 L26,4 L17,0 C17,0 18.3049783,1.67752588 18.8066955,3 L0,3 L0,5 L18.7226482,5 Z&quot; id=&quot;Triangle-1&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g id=&quot;basic/page-text&quot; transform=&quot;translate(0.000000, 172.000000)&quot;&gt;&lt;use id=&quot;page&quot; stroke=&quot;#7F8C8D&quot; mask=&quot;url(#mask-6)&quot; stroke-width=&quot;4&quot; fill=&quot;#FFFFFF&quot; fill-rule=&quot;evenodd&quot; xlink:href=&quot;#path-5&quot;&gt;&lt;/use&gt;&lt;text id=&quot;login&quot; font-family=&quot;ArialMT, Arial&quot; font-size=&quot;12&quot; font-weight=&quot;normal&quot; line-spacing=&quot;13&quot; fill=&quot;#7F8C8D&quot;&gt;&lt;tspan x=&quot;19.6826172&quot; y=&quot;32.9296875&quot;&gt;do B&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Applied to our example, we replace&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/bdavidxyz/e32af14aa7bc58e522dc10652df291dd.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;By this:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/bdavidxyz/c4e64d7ab5e4bd1c48a9472d7afdad3c.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;We take a breathe! No decision tree, no “unambiguous” variable (item), functions that make a unitary job …&lt;/p&gt;
+
+&lt;p&gt;We comments again by example, line by line:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/bdavidxyz/529d960b711ccd8d059fc61abe9294fc.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;final-code&quot;&gt;Final Code&lt;/h2&gt;
+
+&lt;script src=&quot;https://gist.github.com/bdavidxyz/ef29f2e44eafb0da0d304823cc3805e5.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;small-synthesis&quot;&gt;Small synthesis&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Zach Holman (@holman). Ancien employé de GitHub, chacun de ses contenu public est tout simplement incroyable. Je suis un fan inconditionnel de son blog et de son site speaking.io, à ce jour toujours le meilleur endroit pour se renseigner quand on veut faire une présentation . Attention pour ceux dont l’anglais n’est pas la langue natale, comme c’est le cas pour moi, il n’est pas toujours simple à décoder.&lt;/p&gt;
+    &lt;p&gt;The code must be covered by automated testing. It does not matter whether they are unitary, of integration, of acceptance. The absence of a safety net prevents the code from being improved.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Sara Soueidan (@SaraSoueidan). Ma Front-End dev préférée. J’ai en commun une même passion pour les oiseaux, mais c’est surtout ses articles sur les SVGs qui sont d’une aide plus que précieuse.&lt;/p&gt;
+    &lt;p&gt;The input parameters must be checked. Although this point is particularly subject to debate in the case of a dynamic language, it will help you to debug your code faster, and also increasing the readability of the code.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Elle Kasai (@ellekasai). Web designer de Vancouver, elle n’a pas sorti beaucoup de projets et d’articles de manière publique, mais chacun d’entre eux est une vraie mine d’or. Je recommande fortement tout ses contenus aux designers qui s’intéresse au code, et au développeurs qui s’intéressent au design.&lt;/p&gt;
+    &lt;p&gt;The functions must be as small as possible, with a maximum explicit naming.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Nicolas Martignole (@nmartignole). Développeur multi-casquette, je lis et je relis chacun de ses articles de blog, dont le ton est un régal pour qui connaît le métier. Nicolas, s’il te plaît, quand est-ce que tu publies le prochain ?&lt;/p&gt;
+    &lt;p&gt;A readable code is not necessarily the shortest.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Thibaut Assus (@tibastral). Indépendant dans le monde Ruby/Rails, conférencier, amis de tous :). En plus d’être très sympa, Thibaut est la personne qui vous en apprendra 1,5 tonnes à propos des relations clients, du rapport à l’argent, de la simplicité, de l’équilibre vie privée/vie professionnelle. Si vous voulez comprendre la vie, offrez-lui une bière, et écoutez. Taisez-vous et écoutez.&lt;/p&gt;
+    &lt;p&gt;Avoid any for loop, application programming simplifies reading.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Christophe Porteneuve (@porteneuve). Organisateur du Paris Web, expert web haut de panier, formateur, infernale machine à troll du monde Javascript. N’attendez pas de passer une journée “tranquille” avec Christophe, il ne sait pas ce que c’est. En conférence, en formation, vous allez prendre de bonnes claques, et repartir content.  Son site :http://delicious-insights.com/&lt;/p&gt;
+    &lt;p&gt;any (relevant!) comment is good, but the best remains the explanation of the nominal case.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Camille Roux (@CamilleRoux). Camille m’a appris quelques trucs indispensables sur l’entreprenariat, il a également contribué comme personne d’autre à dépoussiérer l’image du développeur en France.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://packagecontrol.io/packages/Alignment&quot;&gt;Aligning characters&lt;/a&gt; helps to make the code readable.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Nguyen Le (@newincreative). Son site web http://www.verse-co.com/ est une mine d’or. J’adore le design de son site, d’une élégance et d’un minimalisme remarquables. Maintenant je comprend vraiment le métier de web designer, et c’est bien grâce à lui. Je continue de dévorer chaque nouvel article qui sort.&lt;/p&gt;
+    &lt;p&gt;Any oddity, counter-intuitive or that makes you think for more than 2 seconds must be written in black and white using a statement previously made by the team members (XXX most often).&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Julien Le Coupanec (@LeCoupa) Il n’y a pas beaucoup de développeur qui s’intéressent à ce point à l’acquisition. Chez Julien, c’est une passion dévorante et je le remercie infiniment de partager tout son savoir faire avec son public.&lt;/p&gt;
+    &lt;p&gt;To avoid overloading the article, naming variables has not been mentioned, whereas it is probably &lt;a href=&quot;https://martinfowler.com/bliki/TwoHardThings.html&quot;&gt;the hardest thing&lt;/a&gt; in computing. You’ve been warned :)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Mese Ali (@meseali)
-Il écrit des articles sur la croissance qui sont tout à fait remarquables. Alors qu’un bon 95% des articles sur le Growth Hacking sont de simples clickbait, chacun de ses articles fait plutôt parti du top 1%.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Alex Turnbull (@alexmturnbull)
-His blog helps a lot any entrepreneur that needs a content creation strategy. Or just strategy. I can’t believe groovehq blog has only 8k followers on Twitter.&lt;/p&gt;
+    &lt;p&gt;It’s never really over :&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://medium.com/making-internets/why-using-chain-is-a-mistake-9bc1f80d51ba#.5qwj6cycm&quot;&gt;a recent article&lt;/a&gt; suggests not to use _.chain&lt;/li&gt;
+      &lt;li&gt;we should at least put a warning if an input parameter is not valid in our example.&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
 </description>
-        <pubDate>Mon, 12 Sep 2016 00:00:00 +0200</pubDate>
-        <link>http://bdavidxyz.com/blog/who-are-your-superstars/</link>
-        <guid isPermaLink="true">http://bdavidxyz.com/blog/who-are-your-superstars/</guid>
+        <pubDate>Mon, 23 Jan 2017 00:00:00 +0100</pubDate>
+        <link>http://bdavidxyz.com/blog/clean-code/</link>
+        <guid isPermaLink="true">http://bdavidxyz.com/blog/clean-code/</guid>
         
         
         <category>work</category>
