@@ -10,6 +10,8 @@ description: "How to write a readable code"
 ---
 
 <p>&nbsp;</p>
+**Update 9 Deb 2017** : _Today, it is by far my most read article, and also the most hated. I didn’t intend to publish the holy grails of clean code, there is already a whole book for it. As the title implies, the quality is pushed a little too far, and achieve it on every function is probably not so realistic. I tried to explore new ways to document code and augment robustness, you don’t have to agree with / like it, just do whatever you want to increase both quality and speed of delivery._
+<p>&nbsp;</p>
 The article is written with ES6 for examples, but the article could be applied to other programming languages.
 <p>&nbsp;</p>
 
