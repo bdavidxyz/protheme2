@@ -6,14 +6,14 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Feb 2017 09:57:10 +0100</pubDate>
-    <lastBuildDate>Thu, 09 Feb 2017 09:57:10 +0100</lastBuildDate>
+    <pubDate>Fri, 10 Feb 2017 07:51:54 +0100</pubDate>
+    <lastBuildDate>Fri, 10 Feb 2017 07:51:54 +0100</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>An exceedingly clean code</title>
         <description>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update 9 Deb 2017&lt;/strong&gt; : &lt;em&gt;Today, it is by far my most read article, and also the most hated. I didn’t intend to publish the holy grails of clean code, there is already a whole book for it. As the title implies, the quality is pushed a little too far, and achieve it on every function is probably not so realistic. I tried to explore new ways to document code and augment robustness, you don’t have to agree with / like it, just do whatever you want to increase both quality and speed of delivery.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update 9 Feb 2017&lt;/strong&gt; : &lt;em&gt;Today, it is by far my most read article, and also the most hated. I didn’t intend to publish the holy grails of clean code, there is already a whole book for it. As the title implies, the quality is pushed a little too far, and achieve it on every function is probably not so realistic. I tried to explore new ways to document code and augment robustness, you don’t have to agree with / like it, just do whatever you want to increase both quality and speed of delivery.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;The article is written with ES6 for examples, but the article could be applied to other programming languages.&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
