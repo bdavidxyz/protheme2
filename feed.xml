@@ -6,14 +6,73 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 10 Feb 2017 07:51:54 +0100</pubDate>
-    <lastBuildDate>Fri, 10 Feb 2017 07:51:54 +0100</lastBuildDate>
+    <pubDate>Thu, 02 Mar 2017 16:05:52 +0100</pubDate>
+    <lastBuildDate>Thu, 02 Mar 2017 16:05:52 +0100</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>The simplest landing page</title>
+        <description>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;A demo for the impatients &lt;a href=&quot;https://bdavidxyz.github.io/simplest-startup-starter/&quot;&gt;is available here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you are working in a startup, you will probably need a landing page for a marketing campaign under heavy time &amp;amp; budget contraints.&lt;/p&gt;
+
+&lt;p&gt;This means :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;avoid spend time on programming,&lt;/li&gt;
+  &lt;li&gt;avoid spend time on design,&lt;/li&gt;
+  &lt;li&gt;avoid spend time on graphics (logo, favicon, hero image, etc),&lt;/li&gt;
+  &lt;li&gt;avoid spend time on server configuration,&lt;/li&gt;
+  &lt;li&gt;avoid spend recurring money (unbounce, strikingly, etc) for an idea you don’t even know it’ll work or not.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;IMHO, the best starting point for a landing page, is :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;an extremely well crafted copywriting,&lt;/li&gt;
+  &lt;li&gt;a deployment solution to get your landing page visible to the world,&lt;/li&gt;
+  &lt;li&gt;a robust deployment solution to support strong traffic,&lt;/li&gt;
+  &lt;li&gt;a template that loads insanely fast,&lt;/li&gt;
+  &lt;li&gt;a template that works insanely well on mobile devices,&lt;/li&gt;
+  &lt;li&gt;a mean to chat directly with your customer,&lt;/li&gt;
+  &lt;li&gt;a mean to collect email from your customer,&lt;/li&gt;
+  &lt;li&gt;a way to track visit on your website,&lt;/li&gt;
+  &lt;li&gt;a mean to “make them pay”.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t spend more than 1–2 days on it.&lt;/strong&gt; A very long but interesting explanation is &lt;a href=&quot;https://medium.com/@cliffordoravec/the-no-bs-approach-to-building-your-saas-startups-launch-list-part-2-of-the-epic-guide-to-8cc371be772c#.4f0ptjli9&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The only thing that should cost you time and energy is copywriting.&lt;/p&gt;
+
+&lt;p&gt;Anything else should be free - and actually is, with very low technical skills.&lt;/p&gt;
+
+&lt;p&gt;Here is what I recommend :&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;If you don’t agree with bullets points above, I suggest you again the reading of this &lt;a href=&quot;https://medium.com/@cliffordoravec/the-no-bs-approach-to-building-your-saas-startups-launch-list-part-2-of-the-epic-guide-to-8cc371be772c#.4f0ptjli9&quot;&gt;“epic guide”&lt;/a&gt; which largely motivated this simple template.&lt;/li&gt;
+  &lt;li&gt;Write content inside a Google Doc, you should always &lt;a href=&quot;http://jgthms.com/web-design-in-4-minutes/&quot;&gt;start design with content&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Subscribe to &lt;a href=&quot;https://crisp.im&quot;&gt;Crisp.Im&lt;/a&gt;, &lt;a href=&quot;https://analytics.google.com/&quot;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&quot;payfacile.com&quot;&gt;Payfacile&lt;/a&gt;, &lt;a href=&quot;https://formspree.io/&quot;&gt;Formspree&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Go to the &lt;a href=&quot;https://github.com/bdavidxyz/simplest-startup-starter&quot;&gt;GitHub repository&lt;/a&gt; of the raw template and follow instructions.&lt;/li&gt;
+  &lt;li&gt;Deploy this raw Template to &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub pages&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;(optional) if you want a custom domain, you can buy it at namecheap.com - the only paying stuff of the tutorial, you can get a decent domain for less than 1$ a year.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Tue, 28 Feb 2017 00:00:00 +0100</pubDate>
+        <link>http://bdavidxyz.com/blog/the-simplest-landing-page/</link>
+        <guid isPermaLink="true">http://bdavidxyz.com/blog/the-simplest-landing-page/</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>An exceedingly clean code</title>
         <description>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update 9 Feb 2017&lt;/strong&gt; : &lt;em&gt;Today, it is by far my most read article, and also the most hated. I didn’t intend to publish the holy grails of clean code, there is already a whole book for it. As the title implies, the quality is pushed a little too far, and achieve it on every function is probably not so realistic. I tried to explore new ways to document code and augment robustness, you don’t have to agree with / like it, just do whatever you want to increase both quality and speed of delivery.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update 9 Feb 2017&lt;/strong&gt; : _Today, it is by far my most read article, and also the most hated. I didn’t intend to publish the holy grails of clean code, there is already a whole book for it. As the title implies, the quality is pushed a little too far, and achieve it on every function is probably not so realistic. I tried to explore new ways to make the code more readable, without too much care about performance. You don’t have to agree with / like it :) Take it easy.&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;The article is written with ES6 for examples, but the article could be applied to other programming languages.&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
