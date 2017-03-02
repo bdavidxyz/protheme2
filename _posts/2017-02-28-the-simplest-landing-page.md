@@ -38,9 +38,13 @@ IMHO, the best starting point for a landing page, is :
 
 **Don’t spend more than 1–2 days on it.** A very long but interesting explanation is [here](https://medium.com/@cliffordoravec/the-no-bs-approach-to-building-your-saas-startups-launch-list-part-2-of-the-epic-guide-to-8cc371be772c#.4f0ptjli9).
 
-The only thing that should cost you time and energy is copywriting.
+<p>&nbsp;</p>
 
-Anything else should be free - and actually is, with very low technical skills.
+> **The only thing that should cost you time and energy is copywriting.**
+
+<p>&nbsp;</p>
+
+Anything else **should be free - and actually is**, with very low technical skills.
 
 Here is what I recommend :
 
