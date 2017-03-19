@@ -6,9 +6,69 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 Mar 2017 17:17:44 +0100</pubDate>
-    <lastBuildDate>Wed, 08 Mar 2017 17:17:44 +0100</lastBuildDate>
+    <pubDate>Sun, 19 Mar 2017 18:07:25 +0100</pubDate>
+    <lastBuildDate>Sun, 19 Mar 2017 18:07:25 +0100</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Lessons from an Ember-Node app</title>
+        <description>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pix.beta.gouv.fr&quot;&gt;Pix&lt;/a&gt; is an &lt;a href=&quot;https://github.com/sgmap/pix&quot;&gt;open-source project&lt;/a&gt; initiated by the French Ministry of education.&lt;/p&gt;
+
+&lt;p&gt;I just spent 6 month on this very new project, here is a feedback as a Javascript developer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EmberJS, the good parts.&lt;/strong&gt; 1) Ember is strongly integrated and opinionated : it makes tons of valueless, technicals decisions for you, this feature alone makes a huge difference compared to other SPA frameworks competitors. 2) Ember is very intuitive if you already did some Backbone or Angular before, so assumption that Ember has a high learning curve is simply not true. 3) Ember team is available on Slack, this help is pure gold.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EmberJS, the other parts.&lt;/strong&gt;  1) I felt qUnit is deprecated compared to mocha.  2) ember-data is counter-intuitive, unlike the rest of the framework. 3) Sometimes, Ember fails silently instead of raising an exception 4) testing is not as easy and intuitive as it should, examples available on docs are too gentle. Ember misses a few “showcase” big open-source project with tons of examples that could help on that point.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://airtable.com/&quot;&gt;Airtable&lt;/a&gt; is awesome.&lt;/strong&gt; Sorry to talk about a commercial software here, but it saved us so I find quite fair to talk about it. It is a SASS product, comparable to an advanced Google Spreadsheet. It allow the business people to administrate the backend by themselves. You add/remove strongly typed columns on-the-fly without technical skills. It saved the project when the needs of the Product Owner were not well defined, and were moving very fast.
+When a project starts, it’s definetly far better and agile than hand-made or scaffolded admin backend.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NodeJS in the backend is not &lt;em&gt;that&lt;/em&gt; awesome.&lt;/strong&gt; I don’t really understand “the hype” around Node. It has a very low time-to-market, has no deep integration nor opinions like Ember or Rails. It took us monthes before to have a really productive stack, and even so, classic requirement like building an authentication system is quite a big challenge. For persistence, we chose not-so-well-known knexJS and bookshelfJS. Figuring out how to make our first “make an update in a SQL database” was (kind of) a difficult, technical story. It’s hard to forgive in 2017. Coding everything in an asynchronous way is unsurprisingly harder than the synchronous way, even with “Promises”.&lt;/p&gt;
+
+&lt;p&gt;Questions…&lt;/p&gt;
+
+&lt;p&gt;Can you do achieve every requirement you want with NodeJS ? Yes.&lt;/p&gt;
+
+&lt;p&gt;Is it fast, “enterprise-ready”, testable, scalable ?&lt;/p&gt;
+
+&lt;p&gt;Yes, yes, yes, and yes.&lt;/p&gt;
+
+&lt;p&gt;But it’s not “sweet”.&lt;/p&gt;
+
+&lt;p&gt;If this point matters to you, I suggest you &lt;a href=&quot;https://medium.com/the-node-js-collection/why-the-hell-would-you-use-node-js-4b053b94ab8e#.3je1csdwx&quot;&gt;this article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Build single page application + API is a long-term reward.&lt;/strong&gt; The number of impacted layers to “Get Things Done” is actually quite high. Maintenance cost is huge, short-term productivity is badly impacted. Be absolutely sure you need it before you choose it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ES6 is easy.&lt;/strong&gt; Not a big deal if you wrote vanillaJS. It makes code shorter and more robust.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Relationship to Product Owner is the “human” key to success.&lt;/strong&gt; I have the feeling that would the project be written in PHP or assembler, it would still have been a great success. Once you have a strong mutual confidence, mutual understanding, and benevolent behaviour with your PO and team, the project will succeed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Product Owner is unable to create exhaustive acceptance criteria.&lt;/strong&gt; We dreamed about acceptance criteria that could be automagically mapped to automated tests. This is impossible. We had once a single acceptance criteria (written by PO) that was actually converted into more than 100+ automated test.  You simply can’t ask your PO to write and think about every rules, especially implied rules. It’s your job as developer to convert requirements into realistic business rules. Just rely on the trustful relationship described above with your PO.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The control of your test suite is the “technical” key to success.&lt;/strong&gt; Ok, there are plenty of technical aspects other than testing, but I had the feeling that this one is the most important for any project, this one makes no exception. Once you start to feel that every piece of code fall right were it should, and is tested by the right test the right way, both productivity and quality break through the roof.&lt;/p&gt;
+
+&lt;p&gt;For the Single Page App, the development mode is served by a fake server (Ember Mirage), with stubs that only covers the nominal scenario. This mode allow us to write higher-level test, that covers mostly routing and component communication. We also have classic unit test that covers function in isolation, integration tests that covers components in isolation. This rocks.&lt;/p&gt;
+
+&lt;p&gt;For the backend, it’s a classic approach : integration test are our highest-level, with internet connections cutted by NockJS, everything else falls in the unit test area, with help of mocha / SinonJS.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UI/UX must be defined before to write any code.&lt;/strong&gt; The SketchApp/Photoshop/static HMTL prototypes must be completely defined and validated before to write any line of code. If not, you can’t finish a user story or task. Before we hired a designer, we had to rewrite every piece of functionalities twice or more. Everybody understood the “what”, but each member had a different opinion on “how”. I hope I won’t do that mistake in my next projects :)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Avoid Twitter Bootstrap if you enroll a designer.&lt;/strong&gt; Not using Bootstrap is a mistake if you have no designer. It saves times and energy like no other CSS framework. But once you hired one, drop Bootstrap. We started to fight against the framework to meet designer requirements, which was bad. So now we tend to drop Bootstrap dependency, one component at a time. If you start a fresh new project with a designer in the team, you can pick a lightweight CSS framework like ConciseCSS or KNACSS.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Retrospective is the only mandatory process.&lt;/strong&gt; It doesn’t matter much if you have a certified Scrum Master or a top-notch Kanban person in your team. But retrospective is a mandatory meeting, IMHO. Where you can debate of the utility of other processes. With it, you can continuously improve atmosphere, productivity, tools, everything you need to.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Be paid for an open source project Once in your career.&lt;/strong&gt; This rocks. This demonstrate your abilities more than any resume.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 Mar 2017 00:00:00 +0100</pubDate>
+        <link>http://bdavidxyz.com/blog/lessons-from-ember-node-app/</link>
+        <guid isPermaLink="true">http://bdavidxyz.com/blog/lessons-from-ember-node-app/</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>The simplest landing page</title>
@@ -52,7 +112,7 @@
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;p&gt;Anything else &lt;strong&gt;should be free - and actually is&lt;/strong&gt;, with very low technical skills.&lt;/p&gt;
+&lt;p&gt;Anything else &lt;strong&gt;should be free - and actually is&lt;/strong&gt; , with very low technical skills.&lt;/p&gt;
 
 &lt;p&gt;Here is what I recommend :&lt;/p&gt;
 
