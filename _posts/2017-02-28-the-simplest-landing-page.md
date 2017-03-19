@@ -44,7 +44,7 @@ IMHO, the best starting point for a landing page, is :
 
 <p>&nbsp;</p>
 
-Anything else **should be free - and actually is**, with very low technical skills.
+Anything else **should be free - and actually is** , with very low technical skills.
 
 Here is what I recommend :
 
