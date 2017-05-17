@@ -69,7 +69,7 @@ Write unit test **often** (but not always) means **write less code with higher c
 
  - If this happen, always keep at least one integration test to ensure the whole stack can properly.
 
- - The kind of test is not _that_ important, as long as the description stick to business rule, understandable by a non coder.
+ - The kind of test is not _that_ important, as long as the description stick to a business rule, understandable by a non coder.
 
  - Be pragmatic about the actual value of your test, don't be shy to delete/move/update an existing test.
 
