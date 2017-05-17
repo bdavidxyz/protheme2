@@ -6,9 +6,91 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 May 2017 12:15:13 +0200</pubDate>
-    <lastBuildDate>Wed, 10 May 2017 12:15:13 +0200</lastBuildDate>
+    <pubDate>Wed, 17 May 2017 17:45:57 +0200</pubDate>
+    <lastBuildDate>Wed, 17 May 2017 17:45:57 +0200</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Unit tests vs. Integration tests</title>
+        <description>&lt;h2 id=&quot;hows-there-&quot;&gt;How’s there ?&lt;/h2&gt;
+
+&lt;p&gt;A unit test happens when you test the smallest part of your application is under test, which means : a function.&lt;/p&gt;
+
+&lt;p&gt;If the function under test calls another function, it is an integration test.&lt;/p&gt;
+
+&lt;h2 id=&quot;clichés&quot;&gt;Clichés&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Unit tests&lt;/strong&gt; are the holy grail of automated testing. You should cover everything with unit test, or you’re not what can be called a “developer”.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Integration tests&lt;/strong&gt; are slow, only beginners write such crappy tests, because they are more intuitive to write at first place.&lt;/p&gt;
+
+&lt;h2&gt;&lt;s&gt;Clichés&lt;/s&gt;&lt;/h2&gt;
+
+&lt;p&gt;Despite unit-test activists occupy the place on Stackoverflow, numbers of articles show that &lt;strong&gt;&lt;a href=&quot;https://chriskottom.com/blog/2017/04/full-stack-testing-with-rails-system-tests/&quot;&gt;all&lt;/a&gt;&lt;/strong&gt; is &lt;strong&gt;&lt;a href=&quot;http://rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf&quot;&gt;not&lt;/a&gt;&lt;/strong&gt; that &lt;strong&gt;&lt;a href=&quot;https://henrikwarne.com/2014/09/04/a-response-to-why-most-unit-testing-is-waste/&quot;&gt;simple&lt;/a&gt;&lt;/strong&gt;. Without googling, simply ask developers around you if they covers everything with unit test, you might be surprised.&lt;/p&gt;
+
+&lt;h2&gt;Coding monopoly &quot;player turn&quot; function&lt;/h2&gt;
+
+&lt;p&gt;This how the call stack of how the “player_turns” function of Monopoly game could look like.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/bdavidxyz-com/image/upload/v1494419163/catan2_d3u4aj.png&quot; alt=&quot;Monopoly player turn&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;roll_dice&quot;&gt;roll_dice&lt;/h3&gt;
+
+&lt;p&gt;The first day of your project, you have an automated test that covers the “player_turn” function. “roll_dice” is such a classic requirement, that is has already made and tested by another library. Good ! No need of any test right now.&lt;/p&gt;
+
+&lt;h3 id=&quot;move_pawn&quot;&gt;move_pawn&lt;/h3&gt;
+
+&lt;p&gt;Then you write the “move_pawn” function. It’s actually just reflecting the output of the “roll_dice” function, which is 12 possibilities (two 6-sided dices). Keep an integration test that covers both roll_dice + move pawn is ok.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Boring.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pay_stuff&quot;&gt;pay_stuff&lt;/h3&gt;
+
+&lt;p&gt;But one day the boss come to the office and say “Hey Alfred, the player may buy something after the pawn has been moved.”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Uh-oh.&lt;/strong&gt; You realize that 98 different items could be bought, which makes 98 * 12 cases to cover.&lt;/p&gt;
+
+&lt;p&gt;You can either&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Write 12 * 98 = 1176 integration tests.&lt;/li&gt;
+  &lt;li&gt;Or write 12 + 98 unit tests, and keep 1 integration test just to ensure every function can talk with each other = 111 automated tests.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Write unit test &lt;strong&gt;often&lt;/strong&gt; (but not always) means &lt;strong&gt;write less code with higher confidence.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Always start to write higher-level integration, they are far easier to write, closer to actual business rules.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make every test go as fast as possible, no matter what kind of test it is. It may require subtle work to get it work for integration test.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If the underlying call stack of the function under test suddenly have a combinatory explosion, transfer your integration test to unit test.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If this happen, always keep at least one integration test to ensure the whole stack can properly.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The kind of test is not &lt;em&gt;that&lt;/em&gt; important, as long as the description stick to business rule, understandable by a non coder.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Be pragmatic about the actual value of your test, don’t be shy to delete/move/update an existing test.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 16 May 2017 00:00:00 +0200</pubDate>
+        <link>http://bdavidxyz.com/blog/unit-test-vs-integration-test/</link>
+        <guid isPermaLink="true">http://bdavidxyz.com/blog/unit-test-vs-integration-test/</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>Lessons from an Ember-Node app</title>
