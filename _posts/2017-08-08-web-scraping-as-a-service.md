@@ -7,6 +7,7 @@ date:   2017-08-08
 categories: work
 permalink: /blog/:title/
 description: "How to scrape a website simply"
+image: http://res.cloudinary.com/toutuncafe/image/upload/v1502372106/robot_xgpjqz.svg
 ---
 
 
@@ -59,19 +60,16 @@ If you forget the trailing “?”, you will have no answer, but in this case, t
 Pretty incredible, isn’t it ?
 
 
-
-
-
-
 ## A bad news
 
 Unfortunately, the ignoble codeur didn’t release any API of “the dude.”
 
 Which means you can’t access to “the dude” programmatically. The only way to get this API is to create a web service that scrapes “the dude”.
 The API we will create 
-- POST /ask : Ask a question to the dude. The question is in the body of the request. The API replies “OK” to acknowledge the question, but is unable to answer immediately (remember the dude may take time to think about your question and reply properly).
-- GET /get-answer-to?q= : You can use this endpoint a few seconds after the POST : you will get the answer to the question that match with param q.
-- GET /all-questions : display all questions already asked, with their associated answers.
+- **POST /ask** : Ask a question to the dude. The question is in the body of the request. The API replies “OK” to acknowledge the question, but is unable to answer immediately (remember the dude may take time to think about your question and reply properly).
+- **GET /get-answer-to?q=** : You can use this endpoint a few seconds after the POST : you will get the answer to the question that match with param q.
+- **GET /all-questions** : display all questions already asked, with their associated answers.
+
 
 ## Quickstart
 
@@ -100,7 +98,7 @@ Good ! Now our service is ready to be tested.
 var a = $.ajax({
  type: "POST",
  url: "http://localhost:5000/ask",
- data: {question:'Do you like butternut cream ?'},
+ data: {question:'Do you like butter ?'},
  success: function(e){console.log(e);}
 });
 ```
@@ -110,7 +108,7 @@ var a = $.ajax({
 ```javascript
 var a = $.ajax({
  type: "GET",
- url: "http://localhost:5000/get-answer-for?q=Do you like butternut cream ?",
+ url: "http://localhost:5000/get-answer-for?q=Do you like butter ?",
  success: function(e){console.log(e);}
 });
 ```
