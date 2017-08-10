@@ -688,26 +688,23 @@ textarea:focus {
 /**
  * Base elements
  */
-h1, h2, h3, h4, h5, h6, hgroup,
-ul, ol, dl,
-blockquote, p, address,
-table,
-fieldset, figure,
-pre,
-.media,
-.island,
-.islet {
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .media, .island, .islet {
   margin-bottom: 24px;
   margin-bottom: 1.5rem; }
-  .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet
-  ul, .islet ol, .islet dl, .islet
-  blockquote, .islet p, .islet address, .islet
-  table, .islet
-  fieldset, .islet figure, .islet
-  pre, .islet
-  .media, .islet
-  .island, .islet
-  .islet {
+  .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup,
+  .islet ul,
+  .islet ol,
+  .islet dl,
+  .islet blockquote,
+  .islet p,
+  .islet address,
+  .islet table,
+  .islet fieldset,
+  .islet figure,
+  .islet pre,
+  .islet .media,
+  .islet .island,
+  .islet .islet {
     margin-bottom: 12px;
     margin-bottom: 0.75rem; }
 
@@ -755,7 +752,7 @@ html {
 h1, .alpha {
   font-size: 36px;
   font-size: 2.25rem;
-  line-height: 1.33333; }
+  line-height: 1.3333333333; }
 
 h2, .beta {
   font-size: 30px;
@@ -780,7 +777,7 @@ h5, .epsilon {
 h6, .zeta {
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 1.71429; }
+  line-height: 1.7142857143; }
 
 /**
  * Heading groups and generic any-heading class.
@@ -825,7 +822,7 @@ hgroup .hN {
 .lead {
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 1.33333; }
+  line-height: 1.3333333333; }
 
 /*------------------------------------*\
     $SMALLPRINT

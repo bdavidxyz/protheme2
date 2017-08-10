@@ -6,9 +6,183 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Jun 2017 17:09:05 +0200</pubDate>
-    <lastBuildDate>Tue, 06 Jun 2017 17:09:05 +0200</lastBuildDate>
+    <pubDate>Thu, 10 Aug 2017 14:49:18 +0200</pubDate>
+    <lastBuildDate>Thu, 10 Aug 2017 14:49:18 +0200</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Web scraping as a service</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://bdavidxyz.github.io/ask-the-dude/&quot;&gt;Scrapped website is here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/bdavidxyz/web-scraping-as-a-service&quot;&gt;Final code is here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Today we’ll study how to create a web service that is able to scrape the web.
+Some requirements could be:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ability to extract data from DOM and return it,&lt;/li&gt;
+  &lt;li&gt;Ability to make some conditional browsing,&lt;/li&gt;
+  &lt;li&gt;Ability to create a job, with params,&lt;/li&gt;
+  &lt;li&gt;Ability to retrieve result of this time-consuming job.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The stack relies on big classics:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;NodeJS&lt;/li&gt;
+  &lt;li&gt;Git&lt;/li&gt;
+  &lt;li&gt;NightmareJS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For the latter : 2 years ago I tried SpookyJS, but I found it quite complicated. Spooky is now not so active, and there is the excellent NightmareJS as a replacement : it allows us to drive a headless browser in a trickless, intuitive way.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-website-we-will-scrape&quot;&gt;The website we will scrape&lt;/h2&gt;
+
+&lt;p&gt;We will scrape one of the most technology-advanced AI application ever : &lt;strong&gt;ask-the-dude&lt;/strong&gt; : &lt;a href=&quot;https://bdavidxyz.github.io/ask-the-dude/&quot;&gt;see it here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We can ask the dude any question :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/toutuncafe/image/upload/v1502292004/intro_nwturw.png&quot; alt=&quot;Ask any question&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The dude takes time to answer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/toutuncafe/image/upload/v1502366616/wait_w4yho5.png&quot; alt=&quot;Take time&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The dude always reply&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/toutuncafe/image/upload/v1502291991/yes_gmmd2z.png&quot; alt=&quot;Answer is yes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Answer may vary, according to the question&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/toutuncafe/image/upload/v1502291978/no_rvxwtv.png&quot; alt=&quot;Answer is no&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you forget the trailing “?”, you will have no answer, but in this case, the dude gives you the opportunity to display a random quote.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/toutuncafe/image/upload/v1502291984/error_hzaeue.png&quot; alt=&quot;Answer is error&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pretty incredible, isn’t it ?&lt;/p&gt;
+
+&lt;h2 id=&quot;a-bad-news&quot;&gt;A bad news&lt;/h2&gt;
+
+&lt;p&gt;Unfortunately, the ignoble codeur didn’t release any API of “the dude.”&lt;/p&gt;
+
+&lt;p&gt;Which means you can’t access to “the dude” programmatically. The only way to get this API is to create a web service that scrapes “the dude”.
+The API we will create&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;POST /ask&lt;/strong&gt; : Ask a question to the dude. The question is in the body of the request. The API replies “OK” to acknowledge the question, but is unable to answer immediately (remember the dude may take time to think about your question and reply properly).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;GET /get-answer-to?q=&lt;/strong&gt; : You can use this endpoint a few seconds after the POST : you will get the answer to the question that match with param q.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;GET /all-questions&lt;/strong&gt; : display all questions already asked, with their associated answers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;quickstart&quot;&gt;Quickstart&lt;/h2&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;node --version
+v6.9.5
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;git --version
+git version 2.7.2
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;git clone git@github.com:bdavidxyz/web-scraping-as-a-service.git
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;web-scraping-as-a-service
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;npm install
+&lt;span class=&quot;gp&quot;&gt;$&amp;gt; &lt;/span&gt;npm start
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can open it at &lt;a href=&quot;http://localhost:5000/&quot;&gt;http://localhost:5000/&lt;/a&gt;, a welcome message should be printed if everything installed correctly.&lt;/p&gt;
+
+&lt;p&gt;Good ! Now our service is ready to be tested.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open Chrome&lt;/li&gt;
+  &lt;li&gt;Open &lt;a href=&quot;http://code.jquery.com/&quot;&gt;http://code.jquery.com/&lt;/a&gt;, — we will use some simple jQuery code to test our service&lt;/li&gt;
+  &lt;li&gt;Open the console from there (Cmd+Alt+i for Mac users, F12 for Windows users)&lt;/li&gt;
+  &lt;li&gt;Copy/paste the following code snippets&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;POST&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://localhost:5000/ask&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Do you like butternut cream ?'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;“OK” should be outputted. Wait a few seconds, then&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;GET&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://localhost:5000/get-answer-for?q=Do you like butternut cream ?&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You should have the answer to the question.
+Try now to get an answer to a question you never asked :&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;GET&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://localhost:5000/get-answer-for?q=WTF ?&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can also print all questions&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;GET&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://localhost:5000/all-questions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
+
+&lt;h3 id=&quot;ask-a-question&quot;&gt;Ask a question&lt;/h3&gt;
+
+&lt;p&gt;The relevant part is here : &lt;a href=&quot;https://github.com/bdavidxyz/web-scraping-as-a-service/blob/master/index.js#L27-L72&quot;&gt;https://github.com/bdavidxyz/web-scraping-as-a-service/blob/master/index.js#L27-L72&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;See that NightmareJS is pretty intuitive : you can chain basic instructions very easily. However the famous JS pyramid nightmare (ahem), cannot be completely avoided : once you start to evaluate anything on the page, the result of this evaluation is wrapped in a promise.&lt;/p&gt;
+
+&lt;p&gt;You have to be &lt;strong&gt;very careful&lt;/strong&gt; about these 3 things :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bdavidxyz/web-scraping-as-a-service/blob/master/index.js#L50&quot;&gt;Don’t forget&lt;/a&gt; the keyword “return” in front of the nightmare instance inside the promise, or chaining of promises will not occur.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bdavidxyz/web-scraping-as-a-service/blob/master/index.js#L38&quot;&gt;Don’t forget&lt;/a&gt; to re-instantiate NightmareJS on every request.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bdavidxyz/web-scraping-as-a-service/blob/master/index.js#L63&quot;&gt;Don’t forget&lt;/a&gt; to end your nightmare instance once you used it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notice that in this example, you can achieve conditional browsing : based on the result of a first evaluation, you can reuse the nightmare instance and scrape the web page again.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-parts&quot;&gt;Other parts&lt;/h3&gt;
+
+&lt;p&gt;Great ! Who can do more can do less.&lt;/p&gt;
+
+&lt;p&gt;The two other endpoints /get-answer-to?q= and /all-questions don’t use NightmareJS, they are simple, self-describing ExpressJS endpoints.&lt;/p&gt;
+
+&lt;h2 id=&quot;concluding-thoughts&quot;&gt;Concluding thoughts&lt;/h2&gt;
+
+&lt;p&gt;We have now :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A completely free way to scrape any website, for free,&lt;/li&gt;
+  &lt;li&gt;A way to APIfy any website that is not accessible by any other mean than a web browser,&lt;/li&gt;
+  &lt;li&gt;A way to create some background job,&lt;/li&gt;
+  &lt;li&gt;A way to do some conditional browsing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Possible improvements :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;You can deploy the service to a service like Heroku to make your API accessible from anywhere.&lt;/li&gt;
+  &lt;li&gt;I admit that this doesn’t scale very well, for intensive tasks you may want to use more serious background jobs solutions, and polling an API is also not a very good idea. But that’s enough for today :).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 08 Aug 2017 00:00:00 +0200</pubDate>
+        <link>http://bdavidxyz.com/blog/web-scraping-as-a-service/</link>
+        <guid isPermaLink="true">http://bdavidxyz.com/blog/web-scraping-as-a-service/</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>How to write a Chrome extension</title>
