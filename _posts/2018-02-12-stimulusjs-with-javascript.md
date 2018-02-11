@@ -20,7 +20,7 @@ I plan to write an article about the tool, as if [some people already did](https
 
 ## Make it work with plain old Javascript
 
-StimulusJS expect that the developer use advanced ES6 class features.
+StimulusJS is to be used with advanced ES6 class features.
 
 This is why it doesn't work yet without a proper build system, the documentation [needs to be updated on that point](https://github.com/stimulusjs/stimulus/issues/99). 
 

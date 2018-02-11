@@ -86,7 +86,7 @@ $milli-size:        12px!default;
 $micro-size:        10px!default;
 
 // Color
-$brand-color:       #1127e4!default;
+$brand-color:       #3f51b5!default;
 $brand-face:        $base-font-family;
 
 // How big would you like round corners to be by default?
@@ -124,9 +124,9 @@ $base-ui-color:          $gray-lighter;
 // Brand colors
 // -------------------------
 
-$brand-primary:          #1127e4;
-$brand-primary-dark:     darken($brand-primary, 30%);
-$brand-primary-light:    lighten($brand-primary, 30%);
+$brand-primary:          #3f51b5;
+$brand-primary-dark:     darken($brand-primary, 45%);
+$brand-primary-light:    lighten($brand-primary, 45%);
 
 // Scaffolding
 // -------------------------
