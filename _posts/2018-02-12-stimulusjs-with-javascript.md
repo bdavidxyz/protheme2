@@ -2,7 +2,7 @@
 layout: post
 author: David Boureau
 minread: 7
-title:  "StimulusJS with regular Javascript"
+title:  "StimulusJS with plain old JavaScript"
 date:   2018-02-11
 categories: work
 permalink: /blog/:title/
