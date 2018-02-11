@@ -1942,12 +1942,12 @@ body {
       padding-left: 24px; } }
 
 a {
-  color: #f25454;
+  color: #3f51b5;
   text-decoration: none; }
 
 a:hover,
 a:focus {
-  color: #a10c0c;
+  color: #04050b;
   text-decoration: underline; }
 
 blockquote {
@@ -1976,11 +1976,11 @@ blockquote {
     border-radius: 40px; }
 
 .header--title {
-  color: #f25454;
+  color: #3f51b5;
   text-align: center;
   margin-bottom: 6px; }
   .header--title > a:hover, .header--title > a:focus {
-    color: #f25454;
+    color: #3f51b5;
     text-decoration: none; }
 
 .header--tagline {
@@ -2027,7 +2027,7 @@ blockquote {
       font-size: 20px;
       line-height: 1.45; } }
   .page h1, .post h1 {
-    color: #f25454;
+    color: #3f51b5;
     line-height: 1.2; }
     @media only screen and (min-width: 481px) {
       .page h1, .post h1 {
@@ -2046,9 +2046,9 @@ blockquote {
   margin-bottom: 24px; }
 
 .posts--link:hover, .posts--link:focus {
-  color: #f25454;
+  color: #3f51b5;
   text-decoration: none;
-  background: #fde2e2; }
+  background: #e4e7f6; }
 
 .posts--date {
   color: #aaa; }
@@ -2076,7 +2076,7 @@ blockquote {
   margin-bottom: 24px; }
 
 .post h2 {
-  margin-top: 72px; }
+  margin-top: 48px; }
 
 .post h1 {
   margin-top: 72px; }
