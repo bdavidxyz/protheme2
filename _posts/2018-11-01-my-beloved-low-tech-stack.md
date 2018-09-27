@@ -3,7 +3,7 @@ layout: post
 author: David Boureau
 minread: 11
 title: "My beloved, low-tech stack"
-date: 2018-10-01
+date: 2018-11-01
 categories: work
 permalink: /blog/:title/
 description: "My beloved, low-tech stack"
@@ -31,21 +31,22 @@ The other bad part is langage itself. You have many ways to declare functions, s
 
 ES6 went after ES5, so even an ES6 coder have to know ES5.
 
-ES6 went after ES5, so ES5 is much more universal than ES6.
+ES6 went after ES5, so ES5 is much more universally known than ES6.
 
 "The bad parts" of plain old JavaScript are extremely easy to prevent with a good linter.
 
-The use of separate modules with ES6 is really nice, but I didn't feel the need for it at any point of the project. Polluting the global scope will actually only pollute *one* tab of *one* browser of *one* client, so I can only laugh about that weakpoint, given the time I win by NOT over-instrumenting my project.
+The use of separate modules with ES6 is really nice, but I didn't feel the need for it at any point of the project. Polluting the global scope will actually only pollute *one* tab of *one* browser of *one* client, so I can only laugh about that weakpoint, in comparison of time NOT spent over-instrumenting my project.
 
-Now the worst part : there is nothing you can do with ES6 that you can't with ES5. (Please, see next paragraph if you wanted to tell me "but the API is much more important!")
+Now the important point is : **there is nothing you can do with ES6 that you can't with ES5.** (Please, see next paragraph if you wanted to tell me "but the API is much more important!")
 
-ES6 is nice, but I loose robustness and universality by using it, without any gain anywhere. 
+ES6 is nice, but I loose stability of the build and universality by using it, without any gain anywhere.
 
-So I'm back to a low-tech.
+So I'm back to a low-tech JavaScript technology.
+
 
 ## Lodash
 
-Please stop to say LoDash is no more needed because of future version of JavaScript. The high number of primitives available will never be reached in the core language, so instead of loosing time reinventing the wheel, I reuse 
+Please stop to say LoDash is no more needed because of future version of JavaScript. The high number of primitives available will never be reached in the core language, so instead of loosing time reinventing the wheel, I reuse work of others.
 
 LoDash can be extended, so most of the time, even if the core team decided not to include a feature, someone else wrote an extension that is publicly available on GitHub.
 
@@ -81,7 +82,10 @@ The only case where jQuery can turn into spaghetti code, is when you try to have
 
 ## Redux
 
-This is the only exception of this list. Redux is a quite recent technology, mostly used in combination with React. This is a mistake. Use it in conjunction with jQuery, and you'll save quite a few days per month.
+This is the only exception of this list. Redux is a quite recent technology, mostly used in combination with React. This is a mistake.  Use it in conjunction with jQuery, and you'll save quite a few days per month.
 
 I have worked with React, Ember, Angular, Backbone, Vue. VueJS is probably the most awesome of them, but after a decent try, I dropped it from the main part of the project. Why would I ? 
 
+## Sublime Text
+
+Just a text editor. This one is less controversial, there are a lot of developers are using Sublime as IDE. IMHO, the IDE is not that much important, as long as you can do everything without using the mouse.
