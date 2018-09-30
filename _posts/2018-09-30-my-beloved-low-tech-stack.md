@@ -198,7 +198,7 @@ I love to test something *after* the feature is released. The lacking test often
 
 Thus, I'm ensured to test with the minimum possible effort.
 
-I'm not saying I'm never testing anything. I have currently between 700 and 800 automated tests, frontend and backend alltogether. My code-to-test ratio is 1:2.1, which is https://stackoverflow.com/a/1205695/2595513 a good average. More importantly, I'm confident enough about the application.
+I'm not saying I'm never testing anything. I have currently between 700 and 800 automated tests, frontend and backend alltogether. My code-to-test ratio is 1:2.1, which is [a good average](https://stackoverflow.com/a/1205695/2595513). More importantly, I'm confident enough about the application.
 
 I hugely rely on unit testing on the critical parts of the system, making them sometimes redundant if necessary.
 
