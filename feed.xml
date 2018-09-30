@@ -6,8 +6,8 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Sep 2018 20:56:45 +0200</pubDate>
-    <lastBuildDate>Sun, 30 Sep 2018 20:56:45 +0200</lastBuildDate>
+    <pubDate>Sun, 30 Sep 2018 21:03:28 +0200</pubDate>
+    <lastBuildDate>Sun, 30 Sep 2018 21:03:28 +0200</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
@@ -173,7 +173,7 @@
 
 &lt;p&gt;I’m still astonished to see every new framework (backend or frontend) delivered &lt;strong&gt;without&lt;/strong&gt; console, pre-defined environments, database migration manager, efficient default build and testing tool, efficient admin plugins, and, very importantly, an opinionated directory structure.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;If only one of these feature is missing, you add tons of pressure and unstability on the technical team&lt;/strong&gt;, who is then unable to focus quickly enough business part - or not at a reasonnable price.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If only one of these features is missing, you add tons of pressure and unstability on the technical team&lt;/strong&gt;, who is then unable to focus quickly enough business part - or not at a reasonnable price.&lt;/p&gt;
 
 &lt;p&gt;Now, here is probably a question for Quora or Meta-Stackoverflow.&lt;/p&gt;
 
