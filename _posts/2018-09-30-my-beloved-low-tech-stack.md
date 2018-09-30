@@ -148,7 +148,7 @@ I won't name the IDE I'm using, because it's not the point.
 
 I use an IDE that allow me to do **everything with the keyboard**. It's a huge relief for the mind when you don't have to point something with the mouse's cursor.
 
-Apart from syntaxic coloration and linting, I avoid to give the IDE too much reponsibility. The more you "integrate" things inside the IDE ("I" is for "integrated"), the more unstable tool you have. Then you spend time on your problems, instead of helping your customers to solve their problems.
+Apart from syntaxic coloration and linting, I avoid to give the IDE too much reponsibilities. The more you "integrate" things inside the IDE ("I" is for "integrated"), the more unstable tool you have. Then you spend time on your problems, instead of helping your customers to solve their problems.
 
 <h2><a name="Ruby" href="#Ruby">Ruby</a></h2>
 
@@ -162,7 +162,7 @@ The syntax is easy... once you spent some weeks with it. I would have prefered a
 
 Fortunately, the API is wide, consistent, and developer-friendly -  which is, this time, a good point.
 
-Lastly, Ruby is virtually unused outside the Ruby-on-Rails space. Which is a bad thing. I would have prefered a Python or PHP or Java "on Rails", which would have beed better in a Human Resource point of view.
+Lastly, Ruby is virtually unused outside the Ruby-on-Rails space. Which is a bad thing. I would have prefered a Python or PHP or Java "on Rails", which would have been better in a Human Resource point of view.
 
 <h2><a name="Rails" href="#Rails">Ruby-on-Rails</a></h2>
 
