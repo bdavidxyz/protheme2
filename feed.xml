@@ -6,8 +6,8 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Sep 2018 16:00:04 +0200</pubDate>
-    <lastBuildDate>Sun, 30 Sep 2018 16:00:04 +0200</lastBuildDate>
+    <pubDate>Sun, 30 Sep 2018 16:02:30 +0200</pubDate>
+    <lastBuildDate>Sun, 30 Sep 2018 16:02:30 +0200</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
@@ -157,7 +157,7 @@
 
 &lt;p&gt;It’s &lt;strong&gt;not&lt;/strong&gt; a fantastic langage, but it’s oriented-object enough, and functional oriented enough, to get things done quickly.&lt;/p&gt;
 
-&lt;p&gt;The bad parts are “functions not used as first-class citizens”. Which means I have to create lambda, block and proc if I want to go for a walk with my tiny function. Ahem. Not good.&lt;/p&gt;
+&lt;p&gt;The bad parts are “functions not usable as first-class citizens”. Which means I have to create lambda, block and proc if I want to go for a walk with my tiny function. Ahem. Not good.&lt;/p&gt;
 
 &lt;p&gt;The syntax is easy… once you spent some weeks with it. I would have prefered a C-based syntax which is more world-wide known.&lt;/p&gt;
 
