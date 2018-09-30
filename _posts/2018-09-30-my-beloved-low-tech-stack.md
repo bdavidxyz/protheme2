@@ -19,8 +19,7 @@ In the past, I have considered many backend and frontend frameworks.
 
 End of 2018, here what experience taught me to use for current and next project.
 
-
-## Plain old vanillaJS (JavaScript, but ES5)
+<h2><a name="javascript" href="#javascript">Plain old vanillaJS (JavaScript, but ES5)</a></h2>
 
 Not using ES6 nowadays is probably not something you're allowed to claim publicly. 
 
@@ -62,8 +61,7 @@ Is LoDash a technology of the past ? I don't know, and I don't really care, beca
 
 
 
-
-## jQuery
+<h2><a name="jQuery" href="#jQuery">jQuery</a></h2>
 
 j-j-jQuery ? Aren't you kidding ? I think I just lost 91.2 % of my readers here:)
 
@@ -85,7 +83,7 @@ Worse, if a nice Angular component, you can't use it in React. Each has its own 
 
 Which means for my a11y-addresspicker, if I had an Angular project, but a nice component existed in React, I couldn't use it for my projet. Duh ??
 
-Every new fancy JavaScript framework launched since BackBone in 2011 failed to become "the new web component standard library". Even the official, w3c based, web component is not much used.
+Every new fancy JavaScript framework launched since Backbone in 2011 failed to become "the new web component standard library". Even the official, w3c based, web component is not much used.
 
 jQuery, despite never explicitly being fancy, has always been the **de-facto** standard web component library.
 
@@ -97,8 +95,7 @@ The only case where jQuery can turn into bloated, spaghetti code, is when you tr
 
 In this case, see paragraph below :)
 
-
-## Redux
+<h2><a name="Redux" href="#Redux">Redux</a></h2>
 
 This is the only exception of this list. Redux is a quite recent technology, mostly used in combination with React. This is a mistake.  Use it in conjunction with jQuery, and you'll save quite a few weeks per month.
 
@@ -145,7 +142,7 @@ With Redux :
  Maybe you end up with a JavaScript file (per page/url) that is maybe not as elegant as the one you can find in a React component, but you spare so much time and energy without sacrifing speed, stability. Top of the pop, **you don't use anything that breaks the brower's flow.** 
 
 
-## Keyboard-based IDE
+<h2><a name="IDE" href="#IDE">Keyboard-based IDE</a></h2>
 
 I won't name the IDE I'm using, because it's not the point.
 
@@ -153,7 +150,7 @@ I use an IDE that allow me to do **everything with the keyboard**. It's a huge r
 
 Apart from syntaxic coloration and linting, I avoid to give the IDE too much reponsibility. The more you "integrate" things inside the IDE ("I" is for "integrated"), the more unstable tool you have. Then you spend time on your problems, instead of helping your customers to solve their problems.
 
-## Ruby
+<h2><a name="Ruby" href="#Ruby">Ruby</a></h2>
 
 I code the backend with Ruby.
 
@@ -167,7 +164,7 @@ Fortunately, the API is wide, consistent, and developer-friendly -  which is, th
 
 Lastly, Ruby is virtually unused outside the Ruby-on-Rails space. Which is a bad thing. I would have prefered a Python or PHP or Java "on Rails", which would have beed better in a Human Resource point of view.
 
-## Ruby-on-Rails
+<h2><a name="Rails" href="#Rails">Ruby-on-Rails</a></h2>
 
 A slow and old framework. Not kidding here, this is actually what I'm thinking about it.
 
@@ -175,9 +172,9 @@ But still unbeaten when it's time to get things done.
 
 I'm still astonished to see every new framework (backend or frontend) delivered **without** console, pre-defined environment, migration, efficient default build and testing tool, efficient admin plugins, and, very importantly, an opinionated directory structure.
 
-**If only one of these feature is missing, you add tons of pressure and unstability on the technical team**, who is then unable to focus on the quickly enough business part - or not at a reasonnable price.
+**If only one of these feature is missing, you add tons of pressure and unstability on the technical team**, who is then unable to focus quickly enough business part - or not at a reasonnable price.
 
-It's probably a question for quora or meta-stackoverflow.
+Now, here is probably a question for Quora or Meta-Stackoverflow.
 
 I'm not completly sure why "new" didn't mean "get things done more quickly than the stuff that was here before".
 
@@ -189,12 +186,11 @@ ReactJS focused on the "front-end" part, MeteorJS focused on the "real time" par
 
 No one now focuses on "get thing done quickly" part, and I have no clear answer why history didn't go into this direction.
 
+<h2><a name="Stackoverflow" href="#Stackoverflow">Stackoverflow, and Slack-overflow</a></h2>
 
-## Stackoverflow, and Slack-overflow
+Stackoverflow has 10 years this month, and it didn't lost it's hype actually. Then, it's a bit weird to see him in this list, but it's an important part of my everyday stack. Sometimes I use a slack channel instead, but just learn to isolate a problem and ask clearly, unambiguously on Stackoverflow, and you'll be fine for a while :)
 
-Stackoverflow has 10 years this month, and it didn't lost it's hype actually. Then, it's a bit weird to see him in this list, but it's an important part of my everyday stack. Sometimes I use a slack channel, but just learn to isolate a problem and ask clearly, unambiguously on Stackoverflow, and you'll be fine for a while :)
-
-## Test last
+<h2><a name="test" href="#test">Test last</a></h2>
 
 Again, this is not something you are allowed to claim publicly.
 
@@ -214,17 +210,17 @@ I use TDD sometimes, when  the *how* (the system under test) is known before to 
 
 But, more often, I test the thing **after** I code the thing. I code the smallest possible stuff, I do the ugly manual check in the browser, then I commit/push it, until I release a **draft** version that I can widely discuss with my Product Owner (abbreviated PO). Once the discussion is over, I trash some part of the code, I keep some other parts of the code. I submit it again to the PO. Once he/she's satisfied with it, I have to consider if unit, or integration, or manual testing is the more appropriate thing **for the release that has been proven to be fine** to the PO's eyes.
 
-## CSS is ok
+<h2><a name="css" href="#css">CSS</a></h2>
 
 Generally speaking, new CSS tools and conventions do not occurs very often.
 
-Sass + InuitCSS is ok if you work with a UI designer, Bootstrap 4 + Sass is ok if you don't have an UI designer.
+[Sass](https://sass-lang.com/) + [InuitCSS](https://github.com/inuitcss/inuitcss) is ok if you work with a UI designer, [Bootstrap 4](https://getbootstrap.com/docs/4.1/getting-started/introduction/) + Sass is ok if you don't have an UI designer.
 
-However, I tend to always prefer a low level tech solution. For example, most of the grid layout now is flexbox-based. 
+I tend to always prefer a low-tech solution for each problem I encounter, that also apply for CSS. For example, most of the grid layouts are now flexbox-based. This is not a good thing.
 
-This tend to eliminate older material, even when displaying simple things. I use flexbox
+This tend to eliminate older material, even for displaying simple things. I use flexboxes only for vertical alignment, for everything else there are no obvious reason to use them.
 
-## Unknown build tool
+<h2><a name="build" href="#build">Unknown build tool</a></h2>
 
 Do you know webpack ? It's probably a bad tool because the name "webpack" is known. Which means you probably spent time to tweak it.
 
@@ -236,6 +232,6 @@ Very Ugly™ right ?
 
 No CDN. No bower, gulp, webpack, and so on. I removed a lot of complexity in the project by letting the framework do what it is already supposed to do.
 
-## Conclusion
+<h2><a name="conclusion" href="#conclusion">Conclusion</a></h2>
 
 Doing things "the old way" often mean stability and productivity. Of course criticism should not be abandoned, and sometimes a new tool could mean something great for your project. But be aware that this is the exception, not the rule.
