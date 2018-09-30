@@ -156,7 +156,7 @@ I code the backend with Ruby.
 
 It's **not** a fantastic langage, but it's oriented-object enough, and functional oriented enough, to get things done quickly.
 
-The bad parts are "functions not used as first-class citizens". Which means I have to create lambda, block and proc if I want to go for a walk with my tiny function. Ahem. Not good.
+The bad parts are "functions not usable as first-class citizens". Which means I have to create lambda, block and proc if I want to go for a walk with my tiny function. Ahem. Not good.
 
 The syntax is easy... once you spent some weeks with it. I would have prefered a C-based syntax which is more world-wide known.
 
