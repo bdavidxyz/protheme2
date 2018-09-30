@@ -6,8 +6,8 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Sep 2018 16:02:30 +0200</pubDate>
-    <lastBuildDate>Sun, 30 Sep 2018 16:02:30 +0200</lastBuildDate>
+    <pubDate>Sun, 30 Sep 2018 16:33:57 +0200</pubDate>
+    <lastBuildDate>Sun, 30 Sep 2018 16:33:57 +0200</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
@@ -199,7 +199,7 @@
 
 &lt;p&gt;Thus, I’m ensured to test with the minimum possible effort.&lt;/p&gt;
 
-&lt;p&gt;I’m not saying I’m never testing anything. I have currently between 700 and 800 automated tests, frontend and backend alltogether. My code-to-test ratio is 1:2.1, which is https://stackoverflow.com/a/1205695/2595513 a good average. More importantly, I’m confident enough about the application.&lt;/p&gt;
+&lt;p&gt;I’m not saying I’m never testing anything. I have currently between 700 and 800 automated tests, frontend and backend alltogether. My code-to-test ratio is 1:2.1, which is &lt;a href=&quot;https://stackoverflow.com/a/1205695/2595513&quot;&gt;a good average&lt;/a&gt;. More importantly, I’m confident enough about the application.&lt;/p&gt;
 
 &lt;p&gt;I hugely rely on unit testing on the critical parts of the system, making them sometimes redundant if necessary.&lt;/p&gt;
 
