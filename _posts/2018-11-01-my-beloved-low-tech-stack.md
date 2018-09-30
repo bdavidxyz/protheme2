@@ -169,7 +169,7 @@ A slow and old framework. Not kidding here, this is actually what I'm thinking a
 
 But still unbeaten when it's time to get things done.
 
-I'm still astonished to see every new framework (backend or frontend) delivered **without** console, pre-defined environment, migration, efficient default build and testing tool, efficient admin plugins, and opinionated directory structure.
+I'm still astonished to see every new framework (backend or frontend) delivered **without** console, pre-defined environment, migration, efficient default build and testing tool, efficient admin plugins, and, very importantly, an opinionated directory structure.
 
 **If only one of these feature is missing, you add tons of pressure and unstability on the technical team**, who is then unable to focus on the quickly enough business part - or not at a reasonnable price.
 
@@ -204,24 +204,22 @@ I hugely rely on unit testing on the critical parts of the system, making them s
 
 Some non-critical part are left with an integration test that perfectly does the job.
 
-Some parts are left to a manual testing, because automating it would cost too much. For example, the result of the
- "print this page" button is virtually untestable.
+Some parts are left to a manual testing, because automating it would cost too much. For example, the result of the "print this page" button is virtually untestable.
 
 I use TDD sometimes, when  the *how* (the system under test) is known before to code it.
 
 But, more often, I test the thing **after** I code the thing. I code the smallest possible stuff, I do the ugly manual check in the browser, then I commit/push it, until I release a **draft** version that I can widely discuss with my Product Owner (abbreviated PO). Once the discussion is over, I trash some part of the code, I keep some other parts of the code. I submit it again to the PO. Once he/she's satisfied with it, I have to consider if unit, or integration, or manual testing is the more appropriate thing **for the release that has been proven to be fine** to the PO's eyes.
 
-The Product Owner knows 
 
 ## Unknown build tool
 
 Do you know webpack ? It's probably a bad tool because the name "webpack" is known. Which means you probably spent time to tweak it.
 
-I rely on the build tools of my framework, whose job is to compile assets properly, and backend dependency properly.
+I rely on the build tools of my framework, whose job is to compile assets properly, and build backend dependencies properly.
 
-I copy/paste my frontend 3rd-party dependencies into my projects, and I commit and push them into their GitHub repository.
+I copy/paste my frontend 3rd-party dependencies into my project, then I commit and push them into the project's GitHub repository.
 
-Ugly right ? 
+Very Ugly™ right ?
 
 No CDN. No bower, gulp, webpack, and so on. I removed a lot of complexity in the project by letting the framework do what it is already supposed to do.
 
