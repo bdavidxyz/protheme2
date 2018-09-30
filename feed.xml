@@ -6,8 +6,8 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Sep 2018 15:57:17 +0200</pubDate>
-    <lastBuildDate>Sun, 30 Sep 2018 15:57:17 +0200</lastBuildDate>
+    <pubDate>Sun, 30 Sep 2018 16:00:04 +0200</pubDate>
+    <lastBuildDate>Sun, 30 Sep 2018 16:00:04 +0200</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
@@ -171,7 +171,7 @@
 
 &lt;p&gt;But still unbeaten when it’s time to get things done.&lt;/p&gt;
 
-&lt;p&gt;I’m still astonished to see every new framework (backend or frontend) delivered &lt;strong&gt;without&lt;/strong&gt; console, pre-defined environment, migration, efficient default build and testing tool, efficient admin plugins, and, very importantly, an opinionated directory structure.&lt;/p&gt;
+&lt;p&gt;I’m still astonished to see every new framework (backend or frontend) delivered &lt;strong&gt;without&lt;/strong&gt; console, pre-defined environments, database migration manager, efficient default build and testing tool, efficient admin plugins, and, very importantly, an opinionated directory structure.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;If only one of these feature is missing, you add tons of pressure and unstability on the technical team&lt;/strong&gt;, who is then unable to focus quickly enough business part - or not at a reasonnable price.&lt;/p&gt;
 
