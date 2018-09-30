@@ -212,13 +212,13 @@ But, more often, I test the thing **after** I code the thing. I code the smalles
 
 <h2><a name="css" href="#css">CSS</a></h2>
 
-Generally speaking, new CSS tools and conventions do not occurs very often.
+Generally speaking, new CSS tools and conventions do not occur very often.
 
 [Sass](https://sass-lang.com/) + [InuitCSS](https://github.com/inuitcss/inuitcss) is ok if you work with a UI designer, [Bootstrap 4](https://getbootstrap.com/docs/4.1/getting-started/introduction/) + Sass is ok if you don't have an UI designer.
 
 I tend to always prefer a low-tech solution for each problem I encounter, that also apply for CSS. For example, most of the grid layouts are now flexbox-based. This is not a good thing.
 
-This tend to eliminate older material, even for displaying simple things. I use flexboxes only for vertical alignment, for everything else there are no obvious reason to use them.
+This tend to eliminate older material, even for displaying simple things. I use flexboxes only for vertical alignment, for everything else there are no obvious reasons to use them.
 
 <h2><a name="build" href="#build">Unknown build tool</a></h2>
 
