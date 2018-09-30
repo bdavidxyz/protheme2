@@ -170,7 +170,7 @@ A slow and old framework. Not kidding here, this is actually what I'm thinking a
 
 But still unbeaten when it's time to get things done.
 
-I'm still astonished to see every new framework (backend or frontend) delivered **without** console, pre-defined environment, migration, efficient default build and testing tool, efficient admin plugins, and, very importantly, an opinionated directory structure.
+I'm still astonished to see every new framework (backend or frontend) delivered **without** console, pre-defined environments, database migration manager, efficient default build and testing tool, efficient admin plugins, and, very importantly, an opinionated directory structure.
 
 **If only one of these feature is missing, you add tons of pressure and unstability on the technical team**, who is then unable to focus quickly enough business part - or not at a reasonnable price.
 
