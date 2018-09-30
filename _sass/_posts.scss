@@ -28,6 +28,10 @@
   @extend .gamma;
 }
 
+a .posts--title, a .posts--date {
+  font-weight: 400;
+}
+
 .posts--date {
   color: $gray-light;
 }

@@ -3,18 +3,22 @@ layout: post
 author: David Boureau
 minread: 11
 title: "My beloved, low-tech stack"
-date: 2018-11-01
+date: 2018-09-30
 categories: work
 permalink: /blog/:title/
 description: "My beloved, low-tech stack"
 ---
 
 
-Writing a web-application (clara) for the French unemployed people, I have longly considered each options that would achieve :
+Writing a currently an web application for the French National Employment Center, I have longly considered each options that would achieve :
  - the highest possible quality
  - at the lowest possible price
  - with a maximized speed of delivery
  
+In the past, I have considered many backend and frontend frameworks.
+
+End of 2018, here what experience taught me to use for current and next project.
+
 
 ## Plain old vanillaJS (JavaScript, but ES5)
 
@@ -32,27 +36,27 @@ ES6 went after ES5, so even an ES6 coder have to know ES5.
 
 ES6 went after ES5, so ES5 is much more universally known than ES6.
 
-"The bad parts" of plain old JavaScript are extremely easy to prevent with a good linter.
+["The bad parts"](https://www.oreilly.com/library/view/javascript-the-good/9780596517748/) of plain old JavaScript are extremely easy to prevent with a good linter.
 
 The use of separate modules with ES6 is really nice, but I didn't feel the need for it at any point of the project. Polluting the global scope will actually only pollute *one* tab of *one* browser of *one* client, so I can only laugh about that weakpoint, in comparison of time NOT spent over-instrumenting my project.
 
 Now the important point is : **there is nothing you can do with ES6 that you can't with ES5.** (Please, see next paragraph if you wanted to tell me "but the API is much more important!")
 
-Even babel-compatible, oriented-object programming can be nicely achieved with ES5. https://github.com/WebReflection/classtrophobic-es5
+Even babel-compatible, oriented-object programming [can be nicely achieved with ES5.](https://github.com/WebReflection/classtrophobic-es5)
 
 ES6 is nice, but I loose stability of the build and universality by using it, without any significant gain anywhere.
 
 So I'm back to a low-tech JavaScript technology.
 
 
-## Lodash
+<h2><a name="lodash" href="#lodash">Lodash</a></h2>
 
 Please stop to say Lodash is no more needed because of future version of JavaScript. The high number of primitives available will never be reached in the core language, so instead of loosing time reinventing the wheel, I reuse work of others.
 
-I know Lodash "as-is" doesn't mean "pure" functional programming, but I really don't care. I never had an algorithm that required such a level of so-called "purity". Properly chaining primitives are often more than enough to get things done. Here is one of the most complicated function I've ever written : https://github.com/1024pix/pix/blob/v2.2.0/mon-pix/app/utils/value-as-array-of-boolean.js. Nothing fancy, isn't it ?
+I know Lodash "as-is" doesn't mean "pure" functional programming, but I really don't care. I never had an algorithm that required such a level of so-called "purity". Properly chaining primitives are often more than enough to get things done. [Here](https://github.com/1024pix/pix/blob/v2.2.0/mon-pix/app/utils/value-as-array-of-boolean.js) is one of the most complicated function I've ever written. Nothing fancy, isn't it ?
 
 
-LoDash can be extended, so most of the time, even if the core team decided not to include a feature, someone else wrote an extension that is publicly available on GitHub. The "count" function for example is missing but easy to retrieve and extend : https://github.com/lodash/lodash/issues/702
+Lodash can be extended, so most of the time, even if the core team decided not to include a feature, someone else wrote an extension that is publicly available on GitHub. The "count" function for example is missing but easy to [retrieve](https://github.com/lodash/lodash/issues/702#issuecomment-236617831) and extend.
 
 Is LoDash a technology of the past ? I don't know, and I don't really care, because I can achieve much more with it that I would without.
 
@@ -63,9 +67,9 @@ Is LoDash a technology of the past ? I don't know, and I don't really care, beca
 
 j-j-jQuery ? Aren't you kidding ? I think I just lost 91.2 % of my readers here:)
 
-jQuery is the most popular JavaScript library, 5 years ago, when I learnt JavaScript seriously, jQuery was more known by students than JavaScript itself ! 
+jQuery is the most popular JavaScript library, 5 years ago, when I learnt JavaScript seriously, jQuery was more known by students in the room than JavaScript itself ! 
 
-A good explanation could be the ease of use of the library. 
+A good explanation could be the extreme ease of use of the library.
 
 Today, it is still a lot more used (at least 10 times) than React, who leads the trend of popularity of JS Frameworks.
 
@@ -73,23 +77,23 @@ Which means, when you need a special plugin, there a great chances it already ex
 
 For my current project I needed an accessible (a11y) address picker.
 
-Well, great news, I didn't had to code it, someone made it already... in jQuery.
+Well, great news, I didn't had to code it, [someone made it already](http://haltersweb.github.io/Accessibility/autocomplete.html)... in jQuery.
 
 At that time it didn't exists (yet) in Angular or React. 
 
 Worse, if a nice Angular component, you can't use it in React. Each has its own lifecycle that completly differs from the one of the browser, and of course also differs from others. This is insane.
 
-Which means for my a11y-datepicker, if I had an Angular project, and I nice component existed in React, I couldn't use it for my projet. Duh ??
+Which means for my a11y-addresspicker, if I had an Angular project, but a nice component existed in React, I couldn't use it for my projet. Duh ??
 
 Every new fancy JavaScript framework launched since BackBone in 2011 failed to become "the new web component standard library". Even the official, w3c based, web component is not much used.
 
-jQuery, despite never explicitly being fancy, has always been the de-facto web component library.
+jQuery, despite never explicitly being fancy, has always been the **de-facto** standard web component library.
 
 Moreover, jQuery do not try to have a lifecycle on top of the lifecycle of the browser.
 
 With jQuery you have gigatons of free, customizable, reusable web components.
 
-The only case where jQuery can turn into bloated, paghetti code, is when you try to have a lot of custom interactivity on one web page.
+The only case where jQuery can turn into bloated, spaghetti code, is when you try to have a lot of custom interactivity on one web page.
 
 In this case, see paragraph below :)
 
@@ -210,6 +214,15 @@ I use TDD sometimes, when  the *how* (the system under test) is known before to 
 
 But, more often, I test the thing **after** I code the thing. I code the smallest possible stuff, I do the ugly manual check in the browser, then I commit/push it, until I release a **draft** version that I can widely discuss with my Product Owner (abbreviated PO). Once the discussion is over, I trash some part of the code, I keep some other parts of the code. I submit it again to the PO. Once he/she's satisfied with it, I have to consider if unit, or integration, or manual testing is the more appropriate thing **for the release that has been proven to be fine** to the PO's eyes.
 
+## CSS is ok
+
+Generally speaking, new CSS tools and conventions do not occurs very often.
+
+Sass + InuitCSS is ok if you work with a UI designer, Bootstrap 4 + Sass is ok if you don't have an UI designer.
+
+However, I tend to always prefer a low level tech solution. For example, most of the grid layout now is flexbox-based. 
+
+This tend to eliminate older material, even when displaying simple things. I use flexbox
 
 ## Unknown build tool
 
