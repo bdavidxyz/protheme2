@@ -208,7 +208,13 @@ Some parts are left to a manual testing, because automating it would cost too mu
 
 I use TDD sometimes, when  the *how* (the system under test) is known before to code it.
 
-But, more often, I test the thing **after** I code the thing. I code the smallest possible stuff, I do the ugly manual check in the browser, then I commit/push it, until I release a **draft** version that I can widely discuss with my Product Owner (abbreviated PO). Once the discussion is over, I trash some part of the code, I keep some other parts of the code. I submit it again to the PO. Once he/she's satisfied with it, I have to consider if unit, or integration, or manual testing is the more appropriate thing **for the release that has been proven to be fine** to the PO's eyes.
+But, more often, I test the thing **after** I code the thing. I code the smallest possible stuff, I do the ugly manual check in the browser, then I commit/push it, until I release a **draft** version that I can widely discuss with my Product Owner (abbreviated PO). 
+
+Once the discussion is over, I trash some part of the code (or features), I keep some other parts. I submit it again to the PO. 
+
+And so on.
+
+Until he/she's satisfied with the draft, I have to consider if unit, or integration, or manual testing is the most appropriate thing.
 
 <h2><a name="css" href="#css">CSS</a></h2>
 
