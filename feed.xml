@@ -6,8 +6,8 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Sep 2018 15:49:52 +0200</pubDate>
-    <lastBuildDate>Sun, 30 Sep 2018 15:49:52 +0200</lastBuildDate>
+    <pubDate>Sun, 30 Sep 2018 15:57:17 +0200</pubDate>
+    <lastBuildDate>Sun, 30 Sep 2018 15:57:17 +0200</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
@@ -83,7 +83,7 @@
 
 &lt;p&gt;Which means for my a11y-addresspicker, if I had an Angular project, but a nice component existed in React, I couldn’t use it for my projet. Duh ??&lt;/p&gt;
 
-&lt;p&gt;Every new fancy JavaScript framework launched since BackBone in 2011 failed to become “the new web component standard library”. Even the official, w3c based, web component is not much used.&lt;/p&gt;
+&lt;p&gt;Every new fancy JavaScript framework launched since Backbone in 2011 failed to become “the new web component standard library”. Even the official, w3c based, web component is not much used.&lt;/p&gt;
 
 &lt;p&gt;jQuery, despite never explicitly being fancy, has always been the &lt;strong&gt;de-facto&lt;/strong&gt; standard web component library.&lt;/p&gt;
 
@@ -149,7 +149,7 @@
 
 &lt;p&gt;I use an IDE that allow me to do &lt;strong&gt;everything with the keyboard&lt;/strong&gt;. It’s a huge relief for the mind when you don’t have to point something with the mouse’s cursor.&lt;/p&gt;
 
-&lt;p&gt;Apart from syntaxic coloration and linting, I avoid to give the IDE too much reponsibility. The more you “integrate” things inside the IDE (“I” is for “integrated”), the more unstable tool you have. Then you spend time on your problems, instead of helping your customers to solve their problems.&lt;/p&gt;
+&lt;p&gt;Apart from syntaxic coloration and linting, I avoid to give the IDE too much reponsibilities. The more you “integrate” things inside the IDE (“I” is for “integrated”), the more unstable tool you have. Then you spend time on your problems, instead of helping your customers to solve their problems.&lt;/p&gt;
 
 &lt;h2&gt;&lt;a name=&quot;Ruby&quot; href=&quot;#Ruby&quot;&gt;Ruby&lt;/a&gt;&lt;/h2&gt;
 
@@ -163,7 +163,7 @@
 
 &lt;p&gt;Fortunately, the API is wide, consistent, and developer-friendly -  which is, this time, a good point.&lt;/p&gt;
 
-&lt;p&gt;Lastly, Ruby is virtually unused outside the Ruby-on-Rails space. Which is a bad thing. I would have prefered a Python or PHP or Java “on Rails”, which would have beed better in a Human Resource point of view.&lt;/p&gt;
+&lt;p&gt;Lastly, Ruby is virtually unused outside the Ruby-on-Rails space. Which is a bad thing. I would have prefered a Python or PHP or Java “on Rails”, which would have been better in a Human Resource point of view.&lt;/p&gt;
 
 &lt;h2&gt;&lt;a name=&quot;Rails&quot; href=&quot;#Rails&quot;&gt;Ruby-on-Rails&lt;/a&gt;&lt;/h2&gt;
 
