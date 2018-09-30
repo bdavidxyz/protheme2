@@ -6,8 +6,8 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Sep 2018 16:33:57 +0200</pubDate>
-    <lastBuildDate>Sun, 30 Sep 2018 16:33:57 +0200</lastBuildDate>
+    <pubDate>Sun, 30 Sep 2018 20:53:19 +0200</pubDate>
+    <lastBuildDate>Sun, 30 Sep 2018 20:53:19 +0200</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
@@ -213,13 +213,13 @@
 
 &lt;h2&gt;&lt;a name=&quot;css&quot; href=&quot;#css&quot;&gt;CSS&lt;/a&gt;&lt;/h2&gt;
 
-&lt;p&gt;Generally speaking, new CSS tools and conventions do not occurs very often.&lt;/p&gt;
+&lt;p&gt;Generally speaking, new CSS tools and conventions do not occur very often.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://sass-lang.com/&quot;&gt;Sass&lt;/a&gt; + &lt;a href=&quot;https://github.com/inuitcss/inuitcss&quot;&gt;InuitCSS&lt;/a&gt; is ok if you work with a UI designer, &lt;a href=&quot;https://getbootstrap.com/docs/4.1/getting-started/introduction/&quot;&gt;Bootstrap 4&lt;/a&gt; + Sass is ok if you don’t have an UI designer.&lt;/p&gt;
 
 &lt;p&gt;I tend to always prefer a low-tech solution for each problem I encounter, that also apply for CSS. For example, most of the grid layouts are now flexbox-based. This is not a good thing.&lt;/p&gt;
 
-&lt;p&gt;This tend to eliminate older material, even for displaying simple things. I use flexboxes only for vertical alignment, for everything else there are no obvious reason to use them.&lt;/p&gt;
+&lt;p&gt;This tend to eliminate older material, even for displaying simple things. I use flexboxes only for vertical alignment, for everything else there are no obvious reasons to use them.&lt;/p&gt;
 
 &lt;h2&gt;&lt;a name=&quot;build&quot; href=&quot;#build&quot;&gt;Unknown build tool&lt;/a&gt;&lt;/h2&gt;
 
