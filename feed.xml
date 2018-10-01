@@ -6,13 +6,13 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Oct 2018 11:20:55 +0200</pubDate>
-    <lastBuildDate>Mon, 01 Oct 2018 11:20:55 +0200</lastBuildDate>
+    <pubDate>Mon, 01 Oct 2018 14:46:34 +0200</pubDate>
+    <lastBuildDate>Mon, 01 Oct 2018 14:46:34 +0200</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
         <title>My beloved, low-tech stack</title>
-        <description>&lt;p&gt;Writing a currently an web application for the French National Employment Center, I have longly considered each options that would achieve :&lt;/p&gt;
+        <description>&lt;p&gt;While writing a web application for the French National Employment Center, I have longly considered each options that would achieve :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;the highest possible quality&lt;/li&gt;
   &lt;li&gt;at the lowest possible price&lt;/li&gt;
@@ -21,17 +21,17 @@
 
 &lt;p&gt;In the past, I have considered many backend and frontend frameworks.&lt;/p&gt;
 
-&lt;p&gt;End of 2018, here what experience taught me to use for current and next project.&lt;/p&gt;
+&lt;p&gt;By the end of 2018, here is what experience taught me to use for current and next project.&lt;/p&gt;
 
 &lt;h2&gt;&lt;a name=&quot;javascript&quot; href=&quot;#javascript&quot;&gt;Plain old vanillaJS (JavaScript, but ES5)&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;Not using ES6 nowadays is probably not something you’re allowed to claim publicly.&lt;/p&gt;
 
-&lt;p&gt;Sorry then. I appreciate to work with ES6 when I have to, but I more happy when working with ES5.&lt;/p&gt;
+&lt;p&gt;Sorry then. I appreciate to work with ES6 when I have to, but I’m more happy when working with ES5.&lt;/p&gt;
 
 &lt;p&gt;ES6 is fine. You have a trap-free, shorter syntax, and modules, and probably other good things.&lt;/p&gt;
 
-&lt;p&gt;The most obvious drawback of ES6 is instrumentation. You need a transpiler that integrates properly with your build tool. Once it’s start to be buggy, you spent time on a technical stuff, instead of the business stuff you are paid for.&lt;/p&gt;
+&lt;p&gt;The most obvious drawback of ES6 is instrumentation. You need a transpiler that integrates properly with your build tool. Once it starts to be buggy, you spend time on a technical stuff, instead of the business stuff you are paid for.&lt;/p&gt;
 
 &lt;p&gt;The other bad part is langage itself. You have many ways to declare functions, sometimes the “return” keyword is allowed to be implicit. That makes debugging and reading code pretty hard.&lt;/p&gt;
 
