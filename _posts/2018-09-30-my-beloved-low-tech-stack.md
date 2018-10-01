@@ -10,24 +10,24 @@ description: "My beloved, low-tech stack"
 ---
 
 
-Writing a currently an web application for the French National Employment Center, I have longly considered each options that would achieve :
+While writing a web application for the French National Employment Center, I have longly considered each options that would achieve :
  - the highest possible quality
  - at the lowest possible price
  - with a maximized speed of delivery
  
 In the past, I have considered many backend and frontend frameworks.
 
-End of 2018, here what experience taught me to use for current and next project.
+By the end of 2018, here is what experience taught me to use for current and next project.
 
 <h2><a name="javascript" href="#javascript">Plain old vanillaJS (JavaScript, but ES5)</a></h2>
 
 Not using ES6 nowadays is probably not something you're allowed to claim publicly. 
 
-Sorry then. I appreciate to work with ES6 when I have to, but I more happy when working with ES5.
+Sorry then. I appreciate to work with ES6 when I have to, but I'm more happy when working with ES5.
 
 ES6 is fine. You have a trap-free, shorter syntax, and modules, and probably other good things.
 
-The most obvious drawback of ES6 is instrumentation. You need a transpiler that integrates properly with your build tool. Once it's start to be buggy, you spent time on a technical stuff, instead of the business stuff you are paid for.
+The most obvious drawback of ES6 is instrumentation. You need a transpiler that integrates properly with your build tool. Once it starts to be buggy, you spend time on a technical stuff, instead of the business stuff you are paid for.
 
 The other bad part is langage itself. You have many ways to declare functions, sometimes the "return" keyword is allowed to be implicit. That makes debugging and reading code pretty hard. 
 
