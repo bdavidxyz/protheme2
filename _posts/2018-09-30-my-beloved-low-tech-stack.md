@@ -50,14 +50,14 @@ So I'm back to a low-tech JavaScript technology.
 
 <h2><a name="lodash" href="#lodash">Lodash</a></h2>
 
-Please stop to say Lodash is no more needed because of future version of JavaScript. The high number of primitives available will never be reached in the core language, so instead of loosing time reinventing the wheel, I reuse work of others.
+Please stop to say Lodash is no more needed because of future version of JavaScript. The high number of primitives available will never be reached in the core language, so instead of losing time reinventing the wheel, I reuse work of others.
 
 I know Lodash "as-is" doesn't mean "pure" functional programming, but I really don't care. I never had an algorithm that required such a level of so-called "purity". Properly chaining primitives are often more than enough to get things done. [Here](https://github.com/1024pix/pix/blob/v2.2.0/mon-pix/app/utils/value-as-array-of-boolean.js) is one of the most complicated function I've ever written. Nothing fancy, isn't it ?
 
 
 Lodash can be extended, so most of the time, even if the core team decided not to include a feature, someone else wrote an extension that is publicly available on GitHub. The "count" function for example is missing but easy to [retrieve](https://github.com/lodash/lodash/issues/702#issuecomment-236617831) and extend.
 
-Is LoDash a technology of the past ? I don't know, and I don't really care, because I can achieve much more with it that I would without.
+Is Lodash a technology of the past ? I don't know, and I don't really care, because I can achieve much more with it that I would without.
 
 
 
