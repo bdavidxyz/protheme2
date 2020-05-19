@@ -41,5 +41,8 @@
     "github",
     "googlepagespeed"
   ],
-  "homepage": "http://bdavidxyz.com"
+  "homepage": "http://bdavidxyz.com",
+  "dependencies": {
+    "natives": "^1.1.6"
+  }
 }
