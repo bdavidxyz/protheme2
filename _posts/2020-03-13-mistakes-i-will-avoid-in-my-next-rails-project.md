@@ -56,59 +56,61 @@ Compared to Selenium, Cypress doesn't care about the underlying stack, have fast
 Cypress rocks.
 
 
-## 2. Not using ES6
+## 3. Not using ES6
 
 In my last article, I was writing how easier it was to work with ES5, but now I must acknowledge that ES6 is the new standard, and it's not going to go away anytime.
 
 
-## 3. Sprockets
+## 4. Sprockets
 
 I will keep Sprockets, but I won't use it for my custom code. Why ? Locally, Webpack(er) does already everything what Sprockets is supposed to do.
 
 But must-go external gems may not use it (administrate for example).
 
 
-## 4. Not using turbolinks
+## 5. Not using Turbolinks
 
-I disabled turbolinks on my current project because of the "too many headaches" problem, but now that I have seen the huge performance gap it involves, I will do everything to keep Turbolinks alive as much as possible.
+I disabled Turbolinks on my current project because of the "too many headaches" problem, but now that I have seen the huge performance gap it involves, I will do everything to keep Turbolinks alive as much as possible.
 
 
-## 5. Not using an "action view library"
+## 6. Not using an "action view library"
 
 React or Vue may be optionnal, but the need may arise quickly from the UI/UX part without a warning. So in my mind it is better to be prepared.
 
 I won't use StimulusJS, because without centralized state, reasonning about what is going on in the frontend is a true nightmare.
 
 
-## 6. Fall into the "Technology lock-in trapp"
+## 7. Fall into the "Technology lock-in trapp"
 
 I made this mistakes twice : with the Teaspoon JS test runner, and KnockoutJS.
 
 These are very decent technologies, robust, but not anymore actively maintained.
 
-Over the long run, it involves a lot of lacking features, that may be very frustrating compared to newer equivalent projects.
+Over the long run, it involves a lot of lacking features, that may be very frustrating.
 
 
-## 7. Over engineered deployment solution
+## 8. Over engineered deployment solution
 
 I used mina for deployment, but I feel now that the bunch of configuration needed is another example of "Technology lock-in"
 
 
 
-## 8. Not starting with Docker
+## 9. Not starting with Docker
 
 Using marketing words, Docker is a huge "pain-killer". 
 
 **Any newbies** can install the app from scratch, run specs, deploy to production or staging, with a very small README and very small technical knowledge.
 
-**Any services** (like redis or) can be added with 4 or 5 lines of configuration.
+**Any services** (like redis or sidekiq) can be added with 4 or 5 lines of configuration.
 
 **Any version upgrade** of any service is completly effortless.
 
-It requires some efforts to keep the Docker stack simple, but, like Turbolinks, once mastered, the advantages quickly outweigh the negative effects. 
+It requires some efforts to keep the Docker stack simple, and some others to keep the Docker dev configuration similar to the production one.
+
+But, like Turbolinks, once mastered, the advantages quickly outweigh the negative effects. 
 
 
-## 9. RSpec
+## 10. RSpec
 
 This is more controversial, but after having trying both RSpec and Minitest, I will go for Minitest.
 
@@ -123,7 +125,7 @@ It is easier to reason with minitest, and not *that* difficult to propagate a mo
 
 
 
-## 10. Stay away from the Rails way
+## 11. Stay away from the Rails way
 
 If you try to do something against the framework, you start to loose time and energy very quickly, which is precisely what Rails is fighting against.
 
@@ -135,16 +137,16 @@ Now I keep the controller logic inside controller logic, and this logic is teste
 
 
 
-## 11. Add a few layer if necessary, that's very ok
+## 12. Add a few layer if necessary, that's very ok
 
 It seems a contradiction of the previous paragraph, but it's not.
 
 I badly miss a view layer in some cases, the I added an app/view folder and then I was done.
 
 
-## 12. InuitCSS
+## 13. InuitCSS
 
-There's not much to say in CSS. I will still follow BEM-IT convention, OO structure, naming classes as close as possible from their target, and that's enough to get a long-term, maintainable project.
+There's not much to say in CSS. I will still use SASS/SCSS,follow BEM-IT convention, OO structure, naming classes as close as possible from their target, and that's enough to get a long-term, maintainable project.
 
 I hope that webpacker and postCSS will increase some performances. But as for writing CSS, stick to the few principles above and you're done.
 
@@ -153,7 +155,7 @@ I appreciate inuitCSS a lot, and I will probably use it again.
 But I find the spacing utilities very verbose, and I hope I can switch to another framework like KNACSS the next time.
 
 
-## 13. I won't avoid : rails-administrate
+## 14. I won't avoid : rails-administrate
 
 Well this is probably where Rails outperform its competitors. You have a free, intuitive, secured, customizable administration part for free.
 
@@ -163,7 +165,7 @@ So in my next project, I will avoid **not** to use it :)
 
 
 
-## 14. I won't avoid : guys of Thoughtbot and Gorails
+## 15. I won't avoid : guys of Thoughtbot and Gorails
 
 Well, I don't know how to thanks them enough. Their guides are invaluable and helped me to get things done.
 
