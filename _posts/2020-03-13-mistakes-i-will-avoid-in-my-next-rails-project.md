@@ -3,7 +3,7 @@ layout: post
 author: David Boureau
 minread: 11
 title: "Mistakes I will avoid in my next Ruby-on-Rails project"
-date: 2020-05-19
+date: 2020-05-27
 categories: work
 permalink: /blog/:title/
 description: "Mistakes I will avoid in my next Ruby-on-Rails project"
