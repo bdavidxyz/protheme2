@@ -22,16 +22,16 @@
     <span class="kd">var</span> <span class="nx">Hello</span> <span class="o">=</span> <span class="nx">Class</span><span class="p">({</span>
       <span class="na">extends</span><span class="p">:</span> <span class="nx">Stimulus</span><span class="p">.</span><span class="nx">Controller</span><span class="p">,</span>
       <span class="na">static</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">targets</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">"name"</span> <span class="p">]</span>
+        <span class="na">targets</span> <span class="p">:</span> <span class="p">[</span> <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">]</span>
       <span class="p">},</span>
       <span class="na">greet</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">nameTarget</span><span class="p">;</span>
         <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hello : "</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hello : </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
       <span class="p">}</span>
     <span class="p">});</span>
     
-    <span class="nx">application</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">,</span> <span class="nx">Hello</span><span class="p">);</span>
+    <span class="nx">application</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">,</span> <span class="nx">Hello</span><span class="p">);</span>
 <span class="nt">&lt;/script&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 
