@@ -48,8 +48,12 @@ My working environment :
 
 Things I work with the most currently:
 
-- [JavaScript](http://en.wikipedia.org/wiki/JavaScript), [Node.js](http://nodejs.org/)
 - [Rails](http://rubyonrails.org/)
+- [JavaScript](http://en.wikipedia.org/wiki/JavaScript), [Node.js](http://nodejs.org/)
+- [Vue.js](https://github.com/vuejs/vue)
+- [InuitCSS](https://github.com/inuitcss/inuitcss)
+- [KNACSS](https://github.com/alsacreations/KNACSS)
+- [Docker](https://www.docker.com/)
 - [React.js](http://facebook.github.io/react/)
 - [Ember.js](http://emberjs.com)
 - [Hapi.js](https://hapijs.com/)
@@ -57,16 +61,9 @@ Things I work with the most currently:
 - [JekyllRB](https://jekyllrb.com/)
 - [Agility](http://agilemanifesto.org/)
 
-Things I've used before and sometimes come back to:
-
-- [Backbone.js](http://backbonejs.org/), [MarionetteJS](http://http://marionettejs.com/)
-- [Java](https://www.java.com/), [Angular.js](https://angularjs.org/)
-- [Casper.js](http://www.casperjs.org/), [Sikuli](http://www.sikuli.org/)
-- [SketchApp](https://www.sketchapp.com/), [Photoshop](http://www.adobe.com/Photoshop‎)
-
 Things I'm learning and would like to work with more:
 
-- [WebDesign](https://www.thinkful.com/courses/learn-web-design-online/),
+- [WebDesign](https://www.thinkful.com/courses/learn-web-design-online/)
 - [GrowthHacking](https://growthhackers.com/welcome)
 
 
