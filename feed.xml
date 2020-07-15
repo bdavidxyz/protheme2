@@ -6,9 +6,131 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 May 2020 15:47:02 +0200</pubDate>
-    <lastBuildDate>Thu, 28 May 2020 15:47:02 +0200</lastBuildDate>
-    <generator>Jekyll v4.0.1</generator>
+    <pubDate>Wed, 15 Jul 2020 15:09:57 +0200</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2020 15:09:57 +0200</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>Rails 6 and Active Job tutorial</title>
+        <description>&lt;h2 id=&quot;1-overview&quot;&gt;1. Overview&lt;/h2&gt;
+
+&lt;p&gt;Active Job is a feature of the Ruby-on-Rails framework, that allows you to launch heavy jobs in the background.&lt;/p&gt;
+
+&lt;p&gt;For example, scraping or mailing are these kind of jobs, that are&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;time-consuming,&lt;/li&gt;
+  &lt;li&gt;asynchronous,&lt;/li&gt;
+  &lt;li&gt;launched at pre-defined time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;They are the exact opposite of the request/response pattern of your web server, that is fast, synchronous, and launched at anytime.&lt;/p&gt;
+
+&lt;p&gt;A serious drawback is requires a lot more tooling than the “rails new” command offers.&lt;/p&gt;
+
+&lt;p&gt;Even building the simplest “hello world” job is not &lt;em&gt;that&lt;/em&gt; simple.&lt;/p&gt;
+
+&lt;p&gt;This tutorial is dedicated to those who&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;🕒 have few time to learn,&lt;/li&gt;
+  &lt;li&gt;❤️ loves to learn by example&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-steps-to-reproduce&quot;&gt;2. Steps to reproduce&lt;/h2&gt;
+
+&lt;h3 id=&quot;2a-prerequisites&quot;&gt;2a. Prerequisites&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nv&quot;&gt;$&amp;gt;&lt;/span&gt; git &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+git version 2.7.2
+&lt;span class=&quot;nv&quot;&gt;$&amp;gt;&lt;/span&gt; docker &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+Docker version 17.12.0-ce
+&lt;span class=&quot;nv&quot;&gt;$&amp;gt;&lt;/span&gt; docker-compose &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+docker-compose version 1.18.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Any upper version should work&lt;/p&gt;
+
+&lt;h3 id=&quot;2b-installation&quot;&gt;2b. Installation&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+~/workspace/&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/bdavidxyz/rails_sidekiq_docker
+~/workspace/&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;rails_sidekiq_docker
+~/workspace/rails_sidekiq_docker&lt;span class=&quot;nv&quot;&gt;$&amp;gt;&lt;/span&gt; docker-compose build
+... build images
+~/workspace/rails_sidekiq_docker&lt;span class=&quot;nv&quot;&gt;$&amp;gt;&lt;/span&gt; docker-compose run &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-deps&lt;/span&gt; web rails new &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--skip&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;postgresql
+... create new rails project
+~/workspace/rails_sidekiq_docker&lt;span class=&quot;nv&quot;&gt;$&amp;gt;&lt;/span&gt; ./.dockerdev/post_build.sh
+... added an empty app/controllers/welcome_controller.rb
+... added simple view under app/views/welcome/index.html.erb
+... added an initializer &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;Sidekiq under config/initializers/sidekiq.rb
+... added config.active_job.queue_adapter &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; :sidekiq to config/application.rb
+... changed config/routes.rb &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;default and sidekiq routes
+... changed yarn integrity to &lt;span class=&quot;nb&quot;&gt;false &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;config/webpacker.yml
+... added host:db and username: railsapp to config/database.yml
+... reinstalled sidekiq gem and awesome_print gem to Gemfile
+
+~/workspace/rails_sidekiq_docker&lt;span class=&quot;nv&quot;&gt;$&amp;gt;&lt;/span&gt; docker-compose up
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now go to localhost:3000/sidekiq&lt;/p&gt;
+
+&lt;p&gt;Hurray ! You can monitor every job.&lt;/p&gt;
+
+&lt;p&gt;I suggest you to see in more details docker-compose, to see how all the tools talks to each other.&lt;/p&gt;
+
+&lt;p&gt;I also suggest to go to every file created or modified by post_build.sh&lt;/p&gt;
+
+&lt;h2 id=&quot;3-create-a-hello-world-job&quot;&gt;3. Create a “hello world” job&lt;/h2&gt;
+
+&lt;p&gt;create file app/jobs/hello_world_job.rb&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# app/jobs/hello_world_job.rb&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloWorldJob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationJob&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;queue_as&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:default&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello from HelloWorldJob'&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;modify file app/controllers/welcome_controller.rb to call your job&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# app/controllers/welcome_controller.rb&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WelcomeController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationController&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;index&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;HelloWorldJob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;wait: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;seconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;perform_later&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now go to localhost:3000, it will ask to enqueue the HelloWorldJob since the request goes through WelcomeController#index function.&lt;/p&gt;
+
+&lt;p&gt;Now go to localhost:3000/sidekiq, you will see the job in the “scheduled” section.&lt;/p&gt;
+
+&lt;p&gt;After a few seconds, it appears in the “Done” section&lt;/p&gt;
+
+&lt;h2 id=&quot;4-conclusion&quot;&gt;4. Conclusion&lt;/h2&gt;
+
+&lt;p&gt;We have built a working “hello world” job in less than 3 minutes, without side-effects, with all required tooling and configuration.&lt;/p&gt;
+
+&lt;p&gt;Enjoy !&lt;/p&gt;
+
+&lt;p&gt;😍😍😍&lt;/p&gt;
+
+&lt;p&gt;David.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 14 Jul 2020 00:00:00 +0200</pubDate>
+        <link>http://bdavidxyz.com/blog/rails-6-activejob-tutorial/</link>
+        <guid isPermaLink="true">http://bdavidxyz.com/blog/rails-6-activejob-tutorial/</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>Mistakes I will avoid in my next Ruby-on-Rails project</title>
@@ -1080,91 +1202,6 @@ When a project starts, it’s definetly far better and agile than hand-made or s
         <pubDate>Mon, 23 Jan 2017 00:00:00 +0100</pubDate>
         <link>http://bdavidxyz.com/blog/clean-code/</link>
         <guid isPermaLink="true">http://bdavidxyz.com/blog/clean-code/</guid>
-        
-        
-        <category>work</category>
-        
-      </item>
-    
-      <item>
-        <title>Why I don't care about your project</title>
-        <description>&lt;p&gt;&lt;em&gt;Text below is a translation of a &lt;a href=&quot;http://blog.laurentschaffner.com/pourquoi-je-me-fous-de-ton-projet/&quot;&gt;Pierre Schaffner article&lt;/a&gt;, who kindly authorizes me to publish a translated version.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Most people don’t realise &lt;strong&gt;just how many proposals&lt;/strong&gt; coming from &lt;strong&gt;small business owners&lt;/strong&gt; that I, as an independent developer, receive through my &lt;strong&gt;email account&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Obviously, I am not talking about great projects with real financing and that represent no major technical problem. No, I receive &lt;strong&gt;fabulous proposals&lt;/strong&gt; for which I am offered shares of the yet-to-be-created company that will start its official existence after the project has garnered an incredible success that completely depends on &lt;b style=&quot;text-decoration:underline&quot;&gt;your&lt;/b&gt; developing skills.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/bdavidxyz-com/image/upload/v1472270159/widcayp1_tw3mn7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;If you’re reading this, it’s probably because instead of taking an hour to explain all of this to you personally, I chose to send you this link.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;i-receive-offers-every-day&quot;&gt;I receive offers every day&lt;/h2&gt;
-
-&lt;p&gt;I am not kidding when I say I receive &lt;strong&gt;so-called innovating projects&lt;/strong&gt; every day. And I know I am &lt;strong&gt;not the only one.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;You think your idea is amazing and deserves my full attention, that I should spend hours working on it even though I might never receive anything in exchange for my investment? There are thousands of people like you and apart from engineering students who need to complete their training, &lt;b style=&quot;text-decoration:underline&quot;&gt;no one will take that risk.&lt;/b&gt;&lt;/p&gt;
-
-&lt;p&gt;Having an idea is good. A business plan with nice graphs is also nice. More often than not, the idea is &lt;strong&gt;good or even very good&lt;/strong&gt;. However, as soon we get to talk about concrete matters, I’m left &lt;strong&gt;on my own&lt;/strong&gt;. You think a developer can’t create a Word or Excel file and organize a project? Well you’re wrong.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/bdavidxyz-com/image/upload/v1472270164/widcayp2_zxtbgu.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In theory, I’m just a worker who generates codes, solves bugs on applications, not a thinking person (this one goes to you, business schools). However, I &lt;strong&gt;almost always&lt;/strong&gt; have to change the structure of the projects I receive, improve the &lt;strong&gt;marketing strategy&lt;/strong&gt; for a project created by others, deal with &lt;strong&gt;communication&lt;/strong&gt; on the texts published on the website, or even audit this or that, usually &lt;strong&gt;for free&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;So you say you have professional knowledge of SEO &lt;strong&gt;but you don’t know what URL-rewriting is? Or Htacc– what?&lt;/strong&gt; Let me tell you that developers &lt;b style=&quot;text-decoration:underline&quot;&gt;have real knowledge of SEO&lt;/b&gt; because they’re the ones doing the &lt;strong&gt;optimization&lt;/strong&gt; on the projects they receive.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Most independent web developers also take care of communication and marketing tasks&lt;/strong&gt;. They are versatile and they can do what you do. The only difference is they usually have a &lt;b style=&quot;text-decoration:underline&quot;&gt;better understanding of the market&lt;/b&gt; because they are experienced in innovative developing and because they’ve already received an &lt;strong&gt;incredible number of bad proposals&lt;/strong&gt; before yours came along.&lt;/p&gt;
-
-&lt;p&gt;&lt;b style=&quot;text-decoration:underline&quot;&gt;No,&lt;/b&gt; that new thing they talked about on TV last night, responsive web design, is not that new and you won’t be the first one to use it for your website that specializes in cat ads.&lt;/p&gt;
-
-&lt;h2 id=&quot;i-have-never-seen-any-of-those-projects-turn-into-a-success-story&quot;&gt;I have never seen any of those projects turn into a success story&lt;/h2&gt;
-
-&lt;p&gt;I have received &lt;strong&gt;dozens&lt;/strong&gt; of offers and I sometimes spent &lt;strong&gt;too much time&lt;/strong&gt; on them. Most of those projects &lt;strong&gt;never really started&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Some were badly developed because programmers ran out of patience and their source code turned into some kind &lt;strong&gt;spaghetti&lt;/strong&gt;. Yes, if you modify parts of a code, you can end up generating a flawed code. Refactorization is something you do in the beginning, when you believe in the project, &lt;strong&gt;not after you’ve already spent 6 months on the creation process.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/bdavidxyz-com/image/upload/v1472270152/widcayp3_vwjx4o.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The worst kind of business offer&lt;/strong&gt; is when you ask me to continue working on a code that was partially created by a developer who lost patience and faith. I know what to expect when you tell me about a project that is almost finished but only lacks a bit of work. On the Internet, you can find &lt;strong&gt;different technologies and programming styles&lt;/strong&gt;. A source code that has been created by a student cannot be finished by someone else unless they work on half of what’s already been created. That means &lt;strong&gt;hours&lt;/strong&gt; of observation before even starting to modify it.&lt;/p&gt;
-
-&lt;p&gt;So forget about that, because any experienced developer will refuse to do that.&lt;/p&gt;
-
-&lt;h2 id=&quot;we-have-projects-too-you-know&quot;&gt;We have projects too, you know&lt;/h2&gt;
-
-&lt;p&gt;All the developers I know also have &lt;strong&gt;a project of their own&lt;/strong&gt;. We’ve worked on many projects before yours came along and we’re always working on one or two ideas &lt;strong&gt;outside working hours&lt;/strong&gt; because they’re &lt;strong&gt;a lot more interesting&lt;/strong&gt; than the industrial projects we spend our days slaving over.&lt;/p&gt;
-
-&lt;p&gt;So when you tell a developer your project only requires “a few hours a week, outside working hours”, we couldn’t care less, because during those few hours, we will always choose projects we can control from the beginning to the end without dealing with outside intervention and for which we own 100% of shares.&lt;/p&gt;
-
-&lt;h2 id=&quot;if-your-project-was-that-important-to-you-you-would-learn-how-to-create-it-on-your-own&quot;&gt;“If your project was that important to you, you would learn how to create it on your own”&lt;/h2&gt;
-
-&lt;p&gt;This is what the developer &lt;strong&gt;you have an appointment with&lt;/strong&gt; is thinking, even though he &lt;strong&gt;will never tell you.&lt;/strong&gt; Programming is not an occult practice reserved only to those who studied advanced engineering. Any thirteen-year-old kid can create their website. You’re over 20 and possess &lt;strong&gt;all the cognitive skills&lt;/strong&gt; to do it too.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/bdavidxyz-com/image/upload/v1472270159/widcayp4_coadyw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;But here’s the thing &lt;strong&gt;you’ll never admit to yourself&lt;/strong&gt; or others: &lt;strong&gt;you’re too lazy to learn&lt;/strong&gt;. After all, you’re the &lt;strong&gt;&lt;em&gt;marketing and communication professional&lt;/em&gt;&lt;/strong&gt;, not a technician. If you really believe in your revolutionary project, why don’t you take &lt;strong&gt;6 months&lt;/strong&gt; to get to know about the technology?&lt;/p&gt;
-
-&lt;p&gt;Sure, the end result might not be amazing, because some people are good and others just aren’t. Also, you are likely to encounter difficulties when it comes to &lt;strong&gt;graphic design&lt;/strong&gt;. So what? You can always do most of the work and hire someone to take care of modelling and graphic design. But we both know &lt;em&gt;it’s a lot easier to ask a guy to do the developing for you and wait for him to do the job while hoping he’ll be happy with just 5 or 10% of your ridiculous shares&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/bdavidxyz-com/image/upload/v1472270164/widcayp5_vmtftw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;That developer you’re in contact with knows perfectly how easy &lt;strong&gt;communication is if the application is good&lt;/strong&gt;. The key point is not the Facebook page where you’ll publish the exciting news about your project but creation itself. We know you won’t be working that hard while we’re actually &lt;strong&gt;handling everything.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/bdavidxyz-com/image/upload/v1472270166/widcayp6_ksvgqr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So while you decide you need a &lt;em&gt;Like button&lt;/em&gt; here but not there, and then change your mind, your developer &lt;b style=&quot;text-decoration:underline&quot;&gt;knew from the start&lt;/b&gt; what to do but you chose not to listen. Or maybe your developer didn’t tell you because at the end of the day, it’s YOUR project and the 5% shares you promised means he won’t work that hard for you, I can assure you.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/bdavidxyz-com/image/upload/v1472270167/widcayp7_n8e2ps.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-alternative-that-makes-everyone-happy&quot;&gt;The alternative that makes everyone happy&lt;/h2&gt;
-
-&lt;p&gt;The only solution that will &lt;strong&gt;satisfy all involved&lt;/strong&gt; consists in partially paying the person working with you on this project. Don’t overpay them, just pay them enough to make them interested so they’ll get involved in what they do. For a big project, you could offer 30% of the initial price plus shares, for instance. For the developer, it’s a guarantee they will receive something &lt;strong&gt;as opposed to receiving nothing even though they invested numerous hours of work in a never-ending project.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/bdavidxyz-com/image/upload/v1472270167/widcayp8_y0pw7v.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;If the project turns out to be a failure&lt;/strong&gt;, the developer will think you did take a real financial risk and did not just waste their time. This will truly matter &lt;strong&gt;when you send them other offers&lt;/strong&gt;, which is important if you’re planning on investing in other projects of that kind.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 26 Aug 2016 00:00:00 +0200</pubDate>
-        <link>http://bdavidxyz.com/blog/why-i-dont-care-about-your-project/</link>
-        <guid isPermaLink="true">http://bdavidxyz.com/blog/why-i-dont-care-about-your-project/</guid>
         
         
         <category>work</category>
