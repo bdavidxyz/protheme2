@@ -52,25 +52,22 @@ Any upper version should work
 ```bash
 
 ~/workspace/$ git clone https://github.com/bdavidxyz/rails_sidekiq_docker
+
 ~/workspace/$ cd rails_sidekiq_docker
+
 ~/workspace/rails_sidekiq_docker$> docker-compose build
 ... build images
+
 ~/workspace/rails_sidekiq_docker$> docker-compose run --rm --no-deps web rails new . --skip --database=postgresql
 ... create new rails project
+
 ~/workspace/rails_sidekiq_docker$> ./.dockerdev/post_build.sh
-... added an empty app/controllers/welcome_controller.rb
-... added simple view under app/views/welcome/index.html.erb
-... added an initializer for Sidekiq under config/initializers/sidekiq.rb
-... added config.active_job.queue_adapter = :sidekiq to config/application.rb
-... changed config/routes.rb for default and sidekiq routes
-... changed yarn integrity to false in config/webpacker.yml
-... added host:db and username: railsapp to config/database.yml
-... reinstalled sidekiq gem and awesome_print gem to Gemfile
+... create and modify some files
 
 ~/workspace/rails_sidekiq_docker$> docker-compose up
 ```
 
-Now go to localhost:3000/sidekiq
+Now go to [localhost:3000/sidekiq](http://localhost:3000/sidekiq)
 
 Hurray ! You can monitor every job.
 
@@ -105,11 +102,11 @@ class WelcomeController < ApplicationController
 end
 ```
 
-Now go to localhost:3000, it will ask to enqueue the HelloWorldJob since the request goes through WelcomeController#index function.
+Now go to [localhost:3000](http://localhost:3000), it will ask to enqueue the HelloWorldJob since the request goes through WelcomeController#index function.
 
-Now go to localhost:3000/sidekiq, you will see the job in the "scheduled" section. 
+Now go to [localhost:3000/sidekiq](http://localhost:3000/sidekiq), you will see the job in the "scheduled" section. 
 
-After a few seconds, it appears in the "Done" section
+After a few seconds, it appears in the "Processed" section
 
 
 ## 4. Conclusion
