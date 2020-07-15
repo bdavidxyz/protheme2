@@ -7,23 +7,20 @@ Docker version 17.12.0-ce
 docker-compose version 1.18.0
 </code></pre></div></div><p>Any upper version should work</p><h3 id="2b-installation">2b. Installation</h3><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ~/workspace/<span class="nv">$ </span>git clone https://github.com/bdavidxyz/rails_sidekiq_docker
+
 ~/workspace/<span class="nv">$ </span><span class="nb">cd </span>rails_sidekiq_docker
+
 ~/workspace/rails_sidekiq_docker<span class="nv">$&gt;</span> docker-compose build
 ... build images
+
 ~/workspace/rails_sidekiq_docker<span class="nv">$&gt;</span> docker-compose run <span class="nt">--rm</span> <span class="nt">--no-deps</span> web rails new <span class="nb">.</span> <span class="nt">--skip</span> <span class="nt">--database</span><span class="o">=</span>postgresql
 ... create new rails project
+
 ~/workspace/rails_sidekiq_docker<span class="nv">$&gt;</span> ./.dockerdev/post_build.sh
-... added an empty app/controllers/welcome_controller.rb
-... added simple view under app/views/welcome/index.html.erb
-... added an initializer <span class="k">for </span>Sidekiq under config/initializers/sidekiq.rb
-... added config.active_job.queue_adapter <span class="o">=</span> :sidekiq to config/application.rb
-... changed config/routes.rb <span class="k">for </span>default and sidekiq routes
-... changed yarn integrity to <span class="nb">false </span><span class="k">in </span>config/webpacker.yml
-... added host:db and username: railsapp to config/database.yml
-... reinstalled sidekiq gem and awesome_print gem to Gemfile
+... create and modify some files
 
 ~/workspace/rails_sidekiq_docker<span class="nv">$&gt;</span> docker-compose up
-</code></pre></div></div><p>Now go to localhost:3000/sidekiq</p><p>Hurray ! You can monitor every job.</p><p>I suggest you to see in more details docker-compose, to see how all the tools talks to each other.</p><p>I also suggest to go to every file created or modified by post_build.sh</p><h2 id="3-create-a-hello-world-job">3. Create a “hello world” job</h2><p>create file app/jobs/hello_world_job.rb</p><div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/jobs/hello_world_job.rb</span>
+</code></pre></div></div><p>Now go to <a href="http://localhost:3000/sidekiq">localhost:3000/sidekiq</a></p><p>Hurray ! You can monitor every job.</p><p>I suggest you to see in more details docker-compose, to see how all the tools talks to each other.</p><p>I also suggest to go to every file created or modified by post_build.sh</p><h2 id="3-create-a-hello-world-job">3. Create a “hello world” job</h2><p>create file app/jobs/hello_world_job.rb</p><div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/jobs/hello_world_job.rb</span>
 <span class="k">class</span> <span class="nc">HelloWorldJob</span> <span class="o">&lt;</span> <span class="no">ApplicationJob</span>
   <span class="n">queue_as</span> <span class="ss">:default</span>
 
@@ -38,7 +35,7 @@ docker-compose version 1.18.0
     <span class="no">HelloWorldJob</span><span class="p">.</span><span class="nf">set</span><span class="p">(</span><span class="ss">wait: </span><span class="mi">15</span><span class="p">.</span><span class="nf">seconds</span><span class="p">).</span><span class="nf">perform_later</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre></div></div><p>Now go to localhost:3000, it will ask to enqueue the HelloWorldJob since the request goes through WelcomeController#index function.</p><p>Now go to localhost:3000/sidekiq, you will see the job in the “scheduled” section.</p><p>After a few seconds, it appears in the “Done” section</p><h2 id="4-conclusion">4. Conclusion</h2><p>We have built a working “hello world” job in less than 3 minutes, without side-effects, with all required tooling and configuration.</p><p>Enjoy !</p><p>😍😍😍</p><p>David.</p><div class="post--comments"><div id="disqus_thread"></div><script>
+</code></pre></div></div><p>Now go to <a href="http://localhost:3000">localhost:3000</a>, it will ask to enqueue the HelloWorldJob since the request goes through WelcomeController#index function.</p><p>Now go to <a href="http://localhost:3000/sidekiq">localhost:3000/sidekiq</a>, you will see the job in the “scheduled” section.</p><p>After a few seconds, it appears in the “Processed” section</p><h2 id="4-conclusion">4. Conclusion</h2><p>We have built a working “hello world” job in less than 3 minutes, without side-effects, with all required tooling and configuration.</p><p>Enjoy !</p><p>😍😍😍</p><p>David.</p><div class="post--comments"><div id="disqus_thread"></div><script>
     /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables

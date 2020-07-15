@@ -6,8 +6,8 @@
 </description>
     <link>http://bdavidxyz.com/</link>
     <atom:link href="http://bdavidxyz.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Jul 2020 15:09:57 +0200</pubDate>
-    <lastBuildDate>Wed, 15 Jul 2020 15:09:57 +0200</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2020 15:15:32 +0200</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2020 15:15:32 +0200</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
@@ -55,25 +55,22 @@ docker-compose version 1.18.0
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 ~/workspace/&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/bdavidxyz/rails_sidekiq_docker
+
 ~/workspace/&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;rails_sidekiq_docker
+
 ~/workspace/rails_sidekiq_docker&lt;span class=&quot;nv&quot;&gt;$&amp;gt;&lt;/span&gt; docker-compose build
 ... build images
+
 ~/workspace/rails_sidekiq_docker&lt;span class=&quot;nv&quot;&gt;$&amp;gt;&lt;/span&gt; docker-compose run &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-deps&lt;/span&gt; web rails new &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--skip&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;postgresql
 ... create new rails project
+
 ~/workspace/rails_sidekiq_docker&lt;span class=&quot;nv&quot;&gt;$&amp;gt;&lt;/span&gt; ./.dockerdev/post_build.sh
-... added an empty app/controllers/welcome_controller.rb
-... added simple view under app/views/welcome/index.html.erb
-... added an initializer &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;Sidekiq under config/initializers/sidekiq.rb
-... added config.active_job.queue_adapter &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; :sidekiq to config/application.rb
-... changed config/routes.rb &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;default and sidekiq routes
-... changed yarn integrity to &lt;span class=&quot;nb&quot;&gt;false &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;config/webpacker.yml
-... added host:db and username: railsapp to config/database.yml
-... reinstalled sidekiq gem and awesome_print gem to Gemfile
+... create and modify some files
 
 ~/workspace/rails_sidekiq_docker&lt;span class=&quot;nv&quot;&gt;$&amp;gt;&lt;/span&gt; docker-compose up
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Now go to localhost:3000/sidekiq&lt;/p&gt;
+&lt;p&gt;Now go to &lt;a href=&quot;http://localhost:3000/sidekiq&quot;&gt;localhost:3000/sidekiq&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Hurray ! You can monitor every job.&lt;/p&gt;
 
@@ -106,11 +103,11 @@ docker-compose version 1.18.0
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Now go to localhost:3000, it will ask to enqueue the HelloWorldJob since the request goes through WelcomeController#index function.&lt;/p&gt;
+&lt;p&gt;Now go to &lt;a href=&quot;http://localhost:3000&quot;&gt;localhost:3000&lt;/a&gt;, it will ask to enqueue the HelloWorldJob since the request goes through WelcomeController#index function.&lt;/p&gt;
 
-&lt;p&gt;Now go to localhost:3000/sidekiq, you will see the job in the “scheduled” section.&lt;/p&gt;
+&lt;p&gt;Now go to &lt;a href=&quot;http://localhost:3000/sidekiq&quot;&gt;localhost:3000/sidekiq&lt;/a&gt;, you will see the job in the “scheduled” section.&lt;/p&gt;
 
-&lt;p&gt;After a few seconds, it appears in the “Done” section&lt;/p&gt;
+&lt;p&gt;After a few seconds, it appears in the “Processed” section&lt;/p&gt;
 
 &lt;h2 id=&quot;4-conclusion&quot;&gt;4. Conclusion&lt;/h2&gt;
 
