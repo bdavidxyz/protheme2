@@ -1,7 +1,7 @@
 ---
 layout: post
 author: David Boureau
-minread: 11
+minread: 6
 title: "Rails 6 and Active Job tutorial"
 date: 2020-07-14
 categories: work
