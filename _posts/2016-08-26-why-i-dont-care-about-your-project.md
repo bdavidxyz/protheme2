@@ -9,7 +9,7 @@ permalink: /blog/:title/
 description: "Too much is too much"
 ---
 
-*Text below is a translation of a [Pierre Schaffner article](http://blog.laurentschaffner.com/pourquoi-je-me-fous-de-ton-projet/), who kindly authorizes me to publish a translated version.*
+*Text below is a translation of a [Pierre Schaffner article](https://medium.com/@LoschCode/pourquoi-je-me-fous-de-ton-projet-1f4f8ded8807){:target="_blank"}, who kindly authorizes me to publish a translated version.*
 
 Most people don't realise **just how many proposals** coming from **small business owners** that I, as an independent developer, receive through my **email account**.
 
