@@ -13,7 +13,7 @@
   "author": "David Boureau",
   "license": "WTFPL",
   "devDependencies": {
-    "browser-sync": "2.12.8",
+    "browser-sync": "2.27.11",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "3.1.0",
     "gulp-clean-css": "2.0.8",
